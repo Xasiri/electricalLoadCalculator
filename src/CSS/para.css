@@ -1,0 +1,55 @@
+.n{
+  position: relative;
+  width: 800px;
+  height: 0px;
+  font-size: small;
+  text-align: right;
+  }
+.p {
+  position: absolute;
+  background-color:#f2f2f2;
+  right: 370px;  
+  width: 120px;
+  font-size: larger;
+  text-align: center;
+  padding: 10px;
+
+}
+.nn{
+  position: relative;
+  width: 950px;
+  height: 0px;
+  font-size: small;
+  text-align: right;
+  }
+.pp {
+  position: absolute;
+  background-color:#f2f2f2;
+  right: 150px;  
+  width: 120px;
+  font-size: larger;
+  text-align: center;
+  padding: 10px;
+
+}
+.main{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: stretch;
+}
+.inputF{
+  width: 5ch;
+}
+.inputTray{
+  width: 6ch;
+}
+.inputPower{
+  width: 8ch;
+}
+.inputTrayData{
+  width: 5ch;
+}
+.firstlabel{
+  margin-right: 20px;
+}
