@@ -1,6 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
+
+let WidthValid;
 
 const TrayValidation =({trayData,cableCalculatedData}) =>{
+
   const a =10;
   let actualCableTrayArea = trayData.width*trayData.height
 
@@ -13,20 +16,34 @@ const TrayValidation =({trayData,cableCalculatedData}) =>{
   console.log('trayData',CalculatedDepthofCableTray,trayData.height)
   console.log('trayData',actualWeightofCables,trayData.weight)
 
+ 
+    const checkTrayData = (cableData,trayData) =>{
+        if(cableData < trayData){
+            console.log('widthV', WidthValid)
+
+            WidthValid = true
+            return true
+        }else { WidthValid = false       
+          console.log('widthIn', WidthValid)
+          return false
+      }
+    }
+
 
   
    return( 
     <div>
+   
     <label >Calculated Cable Tray width :
-        {cableCalculatedData.cableWidth}mm  
-         {cableCalculatedData.cableWidth > trayData.width? ' > ' : ' < '} Actual Cable Tray width 
-        ({trayData.width}mm) = {cableCalculatedData.cableWidth > trayData.width? 'Faulty Selection' : 'O.K'}
-    </label><br></br>
+    ({cableCalculatedData.cableWidth}mm) 
+    {checkTrayData(cableCalculatedData.cableWidth,trayData.width)? ' < ': ' > ' } Actual Cable Tray width 
+    ({trayData.width}mm) = {checkTrayData(cableCalculatedData.cableWidth,trayData.width)? 'O.K': ' Faulty Selection' }
+</label><br></br>
     
     <label >Calculated depth of Cable Tray 
         ({CalculatedDepthofCableTray}mm) 
-        {CalculatedDepthofCableTray > trayData.height? ' > ': ' < ' } Actual Depth of Cable Tray 
-        ({trayData.height}mm) = {CalculatedDepthofCableTray > trayData.height? 'Faulty Selection': 'O.K' }
+        {checkTrayData(CalculatedDepthofCableTray,trayData.height)? ' > ': ' < ' } Actual Depth of Cable Tray 
+        ({trayData.height}mm) = {checkTrayData(CalculatedDepthofCableTray,trayData.height)? 'O.K': 'Faulty Selection' }
     </label><br></br>
 
     <label >Calculated Weight of all Cables 

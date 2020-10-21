@@ -11,7 +11,7 @@ export const cableCalculationHandler = (array)=>{
   let weightofAllCables = array.map(i => i.qty*i.density).reduce((a,c) => a+c).toFixed(2);
   let maxHeightofCables = Math.max(...array.map(({diameter}) => diameter))
   let finalAreaofAllCables = (1.2*finalWidthofAllCables*maxHeightofCables).toFixed(2)
-  let cableCalculatedData={ cableWidth:finalWidthofAllCables.toFixed(2),cableDepth:maxHeightofCables,cableWeight:weightofAllCables,cableArea:finalAreaofAllCables}
+  let cableCalculatedData={ cableWidth:finalWidthofAllCables,cableDepth:maxHeightofCables,cableWeight:weightofAllCables,cableArea:finalAreaofAllCables}
 
    return cableCalculatedData
 }
