@@ -28,8 +28,6 @@ const TrayValidation =({trayData,cableCalculatedData}) =>{
           return false
       }
     }
-
-
   
    return( 
     <div>
