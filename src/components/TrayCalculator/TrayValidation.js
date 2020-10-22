@@ -12,9 +12,9 @@ const TrayValidation =({trayData,cableCalculatedData}) =>{
   let remainingCableTrayWidth = ((1- cableCalculatedData.cableWidth/trayData.width)*100).toFixed(2)
   let remainingCableTrayArea = ((1 - cableCalculatedData.cableArea/actualCableTrayArea)*100).toFixed(2)
 
-  console.log('trayData',cableCalculatedData.cableWidth,trayData.width)
-  console.log('trayData',CalculatedDepthofCableTray,trayData.height)
-  console.log('trayData',actualWeightofCables,trayData.weight)
+  // console.log('trayData',cableCalculatedData.cableWidth,trayData.width)
+  // console.log('trayData',CalculatedDepthofCableTray,trayData.height)
+  // console.log('trayData',actualWeightofCables,trayData.weight)
 
  
     const checkTrayData = (cableData,trayData) =>{
