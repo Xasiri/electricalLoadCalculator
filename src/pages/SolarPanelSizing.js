@@ -1,45 +1,35 @@
-import React,{useState,useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
+import React,{useState} from 'react'
+import {useLocation} from 'react-router-dom'
 import {
   capacityofPanelCalculation, 
   sizeofInverterCalculation, 
   stringofPanelCalculation,
   panelinEachStringCalculation,
-  
-} from '../Caculation/SolarCalculation';
+} from '../containers/ElectricalLoad/calculation/SolarPanel/PanelSizingCalculation'
 
 let solarSystemVoltage,capacityofPanel,voltageofPanel
-let sizeofInverter,systemData ={}
-let panelString ={}
+let sizeofInverter ={}
 
-const SizeofPanel=()=>{
-
-  let data =useLocation();
-  let watts= data.state.totalWattsHoursPerDay;
-  let totalWatts = data.state.totalWatts;
-  console.log(data.state.totalWattsHoursPerDay);
-
-  const [dailySunshineHours, setDailySunshineHours] =useState([]);
+const SolarPanelSizing=()=>{
   const [sizePanel,setSizePanel] = useState('');
   const [noofPanelinEachString, setNoofPanelinEachString] = useState();
   const [numberofStringofPanel, setNumberofStringofPanel] = useState();
-  const [panelString,setPanelString] = useState({});
 
-   const sunshineHoursHandler=(e)=>{
+  let consumptionData = useLocation()
+  let watts= consumptionData.state.totalWattsHoursPerDay;
+
+
+  const sunshineHoursHandler=(e)=>{
     e.preventDefault();
     
-    setDailySunshineHours([e.target.value])
     let a = capacityofPanelCalculation(e.target.value, watts)
     setSizePanel(a);
-
   }  
   const submitCapacityHandler =(e) =>{
     e.preventDefault();
     capacityofPanel = e.target.value
     setNumberofStringofPanel(stringofPanelCalculation(sizePanel,capacityofPanel));
-
   }
-
   const submitVolatageHandler=(e)=>{
     e.preventDefault();
     voltageofPanel = e.target.value 
@@ -52,9 +42,7 @@ const SizeofPanel=()=>{
     setNoofPanelinEachString(panelinEachStringCalculation(solarSystemVoltage,voltageofPanel));  
     console.log('panelString',sizePanel,capacityofPanel)
   }
-  
   sizeofInverter= sizeofInverterCalculation(watts);
-
 
   return(
     <div>
@@ -110,8 +98,8 @@ const SizeofPanel=()=>{
      <p>Total No of Solar Panel = {numberofStringofPanel} No’s</p>
      <p>Size of Inverter = {sizeofInverter.watt} watt or {sizeofInverter.VA} VA </p>
       
+
     </div>
   )
 }
-
-export default SizeofPanel;
+export default SolarPanelSizing;

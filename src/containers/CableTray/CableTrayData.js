@@ -1,9 +1,8 @@
-import React,{useState} from 'react';
-import TrayValidation from './TrayValidation';
-import '../../CSS/para.css'
+import React,{useState} from 'react'
+import TrayValidation from './TrayValidation'
+import {cableCalculationHandler} from '../../containers/CableTray/calculation/TrayCalculation'
 
-const CableTrayData =({cableCalculatedData}) =>{
-  const [isDataAvailable, setIsDataAvailable ] = useState(false);
+const CableTrayData = ({products}) =>{
   const [trayData, setTrayData] = useState({
     width:'250',
     height:'100',
@@ -11,6 +10,10 @@ const CableTrayData =({cableCalculatedData}) =>{
     run:'1',
     layers:'1'
   });
+  const [isDataAvailable, setIsDataAvailable ] = useState(false);
+
+  let cableDataArray = [...products]
+  console.log('cables',products)
 
   const traySizeHandler = (e, field) =>{
     const value = e.target.value;
@@ -19,13 +22,13 @@ const CableTrayData =({cableCalculatedData}) =>{
     })
     console.log('traySizeHandler', value, [e.target.name])
   }
+
   const validationStateHandler=()=>{
     setIsDataAvailable(true)
   }
 
-  const submitHandler=()=>{
-      console.log('submitHandler')
-  }
+
+  let cableCalculatedData = cableCalculationHandler(cableDataArray)
 
   return(
     <div>
@@ -91,8 +94,6 @@ const CableTrayData =({cableCalculatedData}) =>{
        cableCalculatedData={cableCalculatedData}  
   />}
 
-     </div>
-  )
+     </div>  )
 }
-
-export default CableTrayData;
+export default CableTrayData

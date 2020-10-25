@@ -2,6 +2,9 @@ export const diameterCalculation =(area) =>{
   return Math.sqrt(area*4/(Math.PI)).toFixed(2);
   
 }
+export const areaCalculation =(diameter) =>{                                            
+  return (Math.PI*Math.pow(diameter, 2)/4).toFixed(2);
+}
 
 export const cableCalculationHandler = (array)=>{
   let numberofCables = array.map(i => i.qty).reduce((a,c) => a+c,0);

@@ -1,15 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import '../../CSS/nav.css'
+import './nav.css'
 
 function Navigation(){
   return(
     <nav>
       <ul className="ul">
-      <Link to='/solar-load-calculator'>
-      <li className="li"> <a className="a"> Solar Load Calculator </a></li>
+      <Link to='/electrical-load-calculator'>
+      <li className="li"> <a className="a"> Electrical Load Calculator </a></li>
       </Link>
-      <Link to='/tray-calculator'>
+      <Link to='/cable-tray-calculator'>
       <li className="li"> <a className="a">Tray Calculator </a></li>
       </Link>
       <Link>
@@ -25,5 +25,3 @@ function Navigation(){
 }
 
 export default Navigation;
-
-
