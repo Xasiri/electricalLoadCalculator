@@ -28,7 +28,7 @@ const Form = ({items,setItems,setFormIsOpen,setIsSubmit}) =>{
   return(
     <div>
     
-    <form>
+    <form autocomplete="on">
     <span className="firstlabel">
     <label>Appliance Name
       <input 
