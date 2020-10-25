@@ -1,10 +1,11 @@
 export const PowerCalculation =(array) =>{                                            
   let totalWatts = array.map(i => i.qty*i.Power).reduce((a,c) => a+c,0)
-  let totalWattsHoursPerDay =array.map(i => i.wattsPerItem).reduce((a,c) => a+c,0)
-  let kwh =array.map(i => i.wattsPerItem).reduce((a,c) => a+c,0)*30/1000;
+  let totalWattsHoursPerDay =array.map(i => i.Power*i.qty*i.Hours).reduce((a,c) => a+c,0)
+  let kwh =totalWattsHoursPerDay*30/1000;
   let powerData = {totalWatts: totalWatts, totalWattsHoursPerDay:totalWattsHoursPerDay, kwh: kwh}
+  console.log('Calculation', powerData,array)
   return powerData;
-  
+   
 }
 
 export const capacityofPanelCalculation =(sunShineHours, totalWattsHoursPerDay) =>{
@@ -27,6 +28,8 @@ export const panelinEachStringCalculation =(solarSystemVoltage,voltageofPanel ) 
 }
 export const stringofPanelCalculation =(sizePanel, capacityofPanel ) =>{
   let numberofStringofPanel = Math.ceil(sizePanel/capacityofPanel);
+  console.log('stringofPanelCalculation',sizePanel,capacityofPanel,numberofStringofPanel)
+
   return numberofStringofPanel;
 }
 

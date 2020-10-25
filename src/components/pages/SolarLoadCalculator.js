@@ -4,10 +4,9 @@ import Appliances from '../SolarCalculator/appliances';
 import TotalConsumption from '../SolarCalculator/totalConsumption';
 import {PowerCalculation} from '../Caculation/SolarCalculation'
 
-let i,j,l,m
+// let i,j,l,m
 
-function SolarLoadCalculator() {
-  const [inputText, setInputText] = useState({applianceName:"",Power:"",Hours:""});
+function SolarLoadCalculator({}) {
   const [items, setItems] = useState([]);
   const [totalWatts,setTotalWatts] =useState([]);
   const [kWhPerMonth, setkWhPerMonth]= useState([]);
@@ -21,7 +20,7 @@ function SolarLoadCalculator() {
 
   let applianceData = [...items];
   const checkLengthHandler = length =>{
-    if(length.itemsLength === 1){
+    if(length.itemsLength === 0){
       setIsSubmit(false);
     }
   }
@@ -34,25 +33,25 @@ function SolarLoadCalculator() {
    }
 
    const removeDataHandler = (array) =>{
-    let a = PowerCalculation(array)
-    stateUpdate(a)
-    console.log('removeDataHandler',a)
+   
+    stateUpdate(PowerCalculation(array))
+    console.log('SolarLoad-removeDataHandler',array)
    }
 
-  const addDataHandler = (item) =>{
-    console.log('SolarLoad-item', item)
+  const addDataHandler = (item) =>{ 
+    console.log('SolarLoad-AddHandleritem', item)
     setIsSubmit(true);
     
     let appliancDataIndex = applianceData.findIndex(i => i.id === item.id);
-    applianceData[appliancDataIndex].wattsPerItem = item.wattsPerItem;
     applianceData[appliancDataIndex].qty = item.qty;
-    i = applianceData.map(i => i.wattsPerItem).reduce((a,c) => a+c);
-    let b= PowerCalculation(applianceData)
-    stateUpdate(b)
-           
-        
+    // i = applianceData.map(i => i.wattsPerItem).reduce((a,c) => a+c);
+    stateUpdate(PowerCalculation(applianceData))    
+         
   }
- 
+  useEffect(() =>{
+    stateUpdate(PowerCalculation(applianceData))   
+  },[applianceData])
+
 
 
   return (
@@ -69,11 +68,11 @@ function SolarLoadCalculator() {
       />
      {formIsOpen && (
       <Form 
-      inputText={inputText} 
-      setInputText={setInputText} 
+     
       items={items} 
       setItems={setItems} 
-      setFormIsOpen={setFormIsOpen}     
+      setFormIsOpen={setFormIsOpen} 
+      setIsSubmit={setIsSubmit}    
     />
      )}
      <button onClick={openForm}>Add Appliance</button>

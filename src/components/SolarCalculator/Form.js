@@ -1,31 +1,29 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../../CSS/para.css'
 
-const Form = ({inputText, setInputText,items,setItems,setFormIsOpen}) =>{
-  
-  const applianceHandler = (e) =>{
-    const value = e.target.value;
-    setInputText({
-      ...inputText,[e.target.name]:value
-    })
+const Form = ({items,setItems,setFormIsOpen,setIsSubmit}) =>{
+  const [applianceName,setApplianceName] = useState('');
+  const [appliancePower,setAppliancePower] = useState('1');
+  const [applianceHours, setApplianceHours] = useState('1');
 
-  }
   const submitHandler =(e) =>{
     
     e.preventDefault();
     setItems([
       ...items,{
-        applianceName:inputText.applianceName,
-        Power:inputText.Power,
-        Hours:inputText.Hours,
+        applianceName:applianceName,
+        Power:appliancePower,
+        Hours:applianceHours,
+        qty:"1",
         id: Math.random()*1000}
       ])
-    setInputText({
-      applianceName:"",
-      Power:"",
-      Hours:""
-    })
+    
+    setApplianceName('');
+    setAppliancePower('1');
+    setApplianceHours('1');
+    
     setFormIsOpen(false)
+    setIsSubmit(true)
   }
   return(
     <div>
@@ -34,31 +32,37 @@ const Form = ({inputText, setInputText,items,setItems,setFormIsOpen}) =>{
     <span className="firstlabel">
     <label>Appliance Name
       <input 
-        onChange={applianceHandler} 
         name='applianceName' 
-        value={inputText.applianceName}
+        value={applianceName}
+        onChange={event => {
+          setApplianceName(event.target.value);
+        }}
         />
       </label>
       </span>
       <span className="firstlabel">
       <label>Power(W)
       <input className="inputPower"
-        onChange={applianceHandler} 
         type="number"  
         name='Power' 
-        value={inputText.Power}
+        value={appliancePower}
+        onChange={event => {
+          setAppliancePower(event.target.value);
+        }}
         />
         </label>
         </span>
         <span className="firstlabel">
         <label>Hours Per Day
         <input 
-        onChange={applianceHandler} 
         type="number"  
         name='Hours' 
         min="0" 
         max="24"
-        value={inputText.Hours}
+        value={applianceHours}
+        onChange={event => {
+          setApplianceHours(event.target.value);
+        }}
         />
         </label>
         </span>

@@ -1,20 +1,19 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import Form from '../TrayCalculator/Form';
 import CableList from '../TrayCalculator/cableList'
 import CableTrayData from '../TrayCalculator/cableTrayData';
-import{cableCalculationHandler} from '../Caculation/TrayCalculation';
+import{cableCalculationHandler} from '../Caculation/TrayCalculation'; 
 
 
 function TrayCalculator() {
-  const [inputT, setInputT] = useState({});
   const [items, setItems] = useState([]);
   const [isSubmit, setIsSubmit] = useState(false);
-  const [trayData, setTrayData] = useState({});
   const [cableCalculatedData, setCableCalculatedData] = useState({});
   
-  // console.log('trayData',trayData)
   
   let cableData = [...items];
+  console.log('trayCalculator-Main', cableData)
+
 
   const checkLengthHandler = length =>{
     if(length.itemsLength === 1){
@@ -36,6 +35,10 @@ function TrayCalculator() {
   
     // console.log('add-data',widthofAllCables,numberofCables,totalCableOuterDiameter)
   }
+  // useEffect(() =>{
+  //   setCableCalculatedData(cableCalculationHandler(cableData))
+  //   console.log('useEffect')
+  // })
  
   return (
 
@@ -47,24 +50,18 @@ function TrayCalculator() {
       setItems={setItems}
       addData={addDataHandler}
       removeData={removeDataHandler}
-      trayData={trayData}
-      setTrayData={setTrayData}
-    
+     
       />
   }
     
     <Form 
       items={items} 
       setItems={setItems}
-      inputT={inputT} 
-      setInputT={setInputT} 
       isSubmit ={isSubmit}
       setIsSubmit={setIsSubmit}
     />
     {isSubmit &&  
       <CableTrayData 
-      trayData={trayData}
-      setTrayData={setTrayData}
       cableCalculatedData={cableCalculatedData}
       />}
    

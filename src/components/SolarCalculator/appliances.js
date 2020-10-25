@@ -22,7 +22,7 @@ const Appliances = ({items, setItems,addData, removeData,isSubmit,checkLength}) 
    const updatedItem = {...item}
    updatedItem.Qty = event.target.value
    setWattsPerDay([updatedItem.Qty*updatedItem.Power*updatedItem.Hours])
-   addData({id:updatedItem.id, qty:updatedItem.Qty , wattsPerItem:updatedItem.Qty*updatedItem.Power*updatedItem.Hours,dailySunshine:1})      
+   addData({id:updatedItem.id, qty:updatedItem.Qty , power:updatedItem.Power, hours:updatedItem.Hours})      
  }
 
    return(
@@ -48,14 +48,14 @@ const Appliances = ({items, setItems,addData, removeData,isSubmit,checkLength}) 
           type="number" 
           id="quantity" 
           name="quantity" 
-         
+          defaultValue="1"
           min="0" 
           max="20"
           />
       </th>
       <th>{item.Power}</th>
       <th>{item.Hours}</th>
-      <th>{item.wattsPerItem}</th>
+      <th>{item.Power*item.Hours*item.qty}</th>
       <th> <button onClick={(event) =>removeHandler(event, item)}>Remove</button></th>
       
       </tr>

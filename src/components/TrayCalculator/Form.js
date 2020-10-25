@@ -1,28 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../../CSS/para.css'
 
-const Form = ({inputT, setInputT,items,setItems,isSubmit,setIsSubmit}) =>{
-  
-  const cableHandler = (e) =>{
-    const value = e.target.value;
-    setInputT({
-      ...inputT,[e.target.name]:value
-    })
-  }
+const Form = ({items,setItems,isSubmit,setIsSubmit}) =>{
+   
+  const [cableArea, setCableArea] =useState('12');
+  const [cableDensity, setCableDensity] =useState('0.5');
+ 
   const submitHandler =(e) =>{
     
     e.preventDefault();
     setItems([
       ...items,{
-        area:inputT.area,
-        density: inputT.density,
+        area:cableArea,
+        density: cableDensity,
         id: Math.random()*1000}
       ])
-    setInputT({
-      area:"",
-      diameter:"",
-      density:""
-    })
+    setCableArea('12');
+    setCableDensity('0.5');
     setIsSubmit(true)
     
     // console.log('submitHandler',items)
@@ -34,10 +28,12 @@ const Form = ({inputT, setInputT,items,setItems,isSubmit,setIsSubmit}) =>{
     <span className="firstlabel">
           <label>Area(Sq.mm) :
       <input className="inputF"
-        onChange={cableHandler} 
         type="number"  
         name='area' 
-        value={inputT.area}
+        value={cableArea}
+        onChange={event => {
+          setCableArea(event.target.value);
+        }}
         />
         </label>
         </span>
@@ -46,10 +42,12 @@ const Form = ({inputT, setInputT,items,setItems,isSubmit,setIsSubmit}) =>{
 
         <label>Density(Kg/m) :
         <input className="inputF"
-        onChange={cableHandler} 
         type="number"  
         name='density' 
-        value={inputT.density}
+        value={cableDensity}
+        onChange={event => {
+          setCableDensity(event.target.value);
+        }}
         maxlength="4" size="4"
         />
         </label>

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import {
   capacityofPanelCalculation, 
@@ -36,6 +36,8 @@ const SizeofPanel=()=>{
   const submitCapacityHandler =(e) =>{
     e.preventDefault();
     capacityofPanel = e.target.value
+    setNumberofStringofPanel(stringofPanelCalculation(sizePanel,capacityofPanel));
+
   }
 
   const submitVolatageHandler=(e)=>{
@@ -47,11 +49,12 @@ const SizeofPanel=()=>{
     e.preventDefault();
     solarSystemVoltage = e.target.value; 
     setNumberofStringofPanel(stringofPanelCalculation(sizePanel,capacityofPanel));
-    setNoofPanelinEachString(panelinEachStringCalculation(solarSystemVoltage,voltageofPanel));
+    setNoofPanelinEachString(panelinEachStringCalculation(solarSystemVoltage,voltageofPanel));  
     console.log('panelString',sizePanel,capacityofPanel)
   }
   
   sizeofInverter= sizeofInverterCalculation(watts);
+
 
   return(
     <div>
@@ -104,7 +107,7 @@ const SizeofPanel=()=>{
 
 
      <p>No of String of Solar Panel = {noofPanelinEachString} No’s</p>
-     <p>No of Solar Panel in Each String = {numberofStringofPanel} No’s</p>
+     <p>Total No of Solar Panel = {numberofStringofPanel} No’s</p>
      <p>Size of Inverter = {sizeofInverter.watt} watt or {sizeofInverter.VA} VA </p>
       
     </div>

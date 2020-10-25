@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Nav from './components/Navbar/Navbar';
 import Home from './components/pages/Home'
 import SolarLoadCalculator from './components/pages/SolarLoadCalculator'
@@ -8,6 +8,7 @@ import SizeofPanel from './components/SolarCalculator/sizeofPanel';
 import styled from 'styled-components';
 
 function App() {
+  const [item, setItem] = useState([]);
   return (
     <Router>
     <div >

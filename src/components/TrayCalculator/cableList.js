@@ -19,7 +19,7 @@ const CableList = ({items, setItems,addData,removeData}) =>{
     // console.log('Udia ',updatedItem.diameter)
     addData({qty:updatedItem.Qty, id:updatedItem.id, diameter:updatedItem.diameter}) 
     
-    
+     
   }  
   
 
@@ -45,8 +45,7 @@ const CableList = ({items, setItems,addData,removeData}) =>{
             onChange={(e)=>qtyChangeHandler(e,item)} 
             type="number" 
             id="quantity" 
-            name="quantity" 
-           
+            name="quantity"  
             min="0" 
             max="20"
             />
