@@ -6,6 +6,7 @@ const ElectricalLoad=()=>{
 
   return(
     <div>
+    <h1>Electrical Load Calculator</h1>
     <Form/>
    
     <TotalPowerConsumption/>
