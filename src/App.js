@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Test from './components/Form/test'
+import Home from './pages/Home'
 import ElectricalLoad from './pages/ElectricalLoad';
 import Navbar from './components/Navbar/Navbar'
 import SolarPanelSizing from './pages/SolarPanelSizing'
@@ -15,7 +15,7 @@ function App() {
     <Route path ="/electrical-load-calculator" component={ElectricalLoad} />
     <Route path="/solar-panel-sizing" component={SolarPanelSizing}/>
     <Route path ="/cable-tray-calculator" component={CableTray}/>
-    <Route path ="/" component={Test}/>
+    <Route path ="/" component={Home}/>
     </Switch>
      
     </div>

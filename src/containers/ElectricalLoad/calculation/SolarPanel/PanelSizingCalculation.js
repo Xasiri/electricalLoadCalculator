@@ -1,5 +1,5 @@
-export const capacityofPanelCalculation =(sunShineHours, totalWattsHoursPerDay) =>{
-  let capacityPanel = Math.ceil(totalWattsHoursPerDay*1.2/sunShineHours);                //1.2= correction Factor
+export const capacityofPanelCalculation =(sunShineHours, KWhperMonth) =>{
+  let capacityPanel = Math.ceil(KWhperMonth*40/sunShineHours);                //1.2= correction Factor
   return capacityPanel;
 }
 

@@ -17,7 +17,7 @@ function ProductRow(props) {
       <EditableCell className="name" cellData={{
         type: "name",
         value: props.product.name,
-        id: props.product.id
+        id: props.product.id 
       }}/>
       <EditableCell className="power" cellData={{
         type: "qty",
