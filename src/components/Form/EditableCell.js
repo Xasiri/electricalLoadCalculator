@@ -7,7 +7,7 @@ function EditableCell(props) {
 
   return (
     <input
-      className="inputSolar"
+      className={props.cellData.type === 'qty' ? 'inputSolarQty' : 'inputSolar'}
       type="text"
       id={props.cellData.id}
       value={props.cellData.value}

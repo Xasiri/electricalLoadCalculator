@@ -20,7 +20,9 @@ function ProductTable(props) {
         <Col lg={3} md={4}>
           Appliance
         </Col>
-        <Col md={2}>Quantity</Col>
+        <Col className="QtyHeader" md={2}>
+          Quantity
+        </Col>
         <Col md={2}>Watts</Col>
         <Col md={2}>Hours on per Day</Col>
         <Col md={2}>Watts Hours per Day</Col>

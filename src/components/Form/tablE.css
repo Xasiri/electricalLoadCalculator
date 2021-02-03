@@ -29,9 +29,16 @@ th {
 .addAppliance {
   width: 130px !important;
 }
+.QtyHeader {
+  position: relative;
+  padding-left: 30px !important;
+}
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .ContainerHeader {
     font-size: 13px;
+  }
+  .QtyHeader {
+    padding-left: 13px !important;
   }
 }

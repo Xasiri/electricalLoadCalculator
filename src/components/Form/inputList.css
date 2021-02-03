@@ -47,18 +47,45 @@ input[list] {
   font-weight: 700;
   color: #444;
   line-height: 1.3;
-  padding: 0.3em 2em 0.5em 0.8em;
+  padding: 0.3em 1em 0.3em 0.3em;
   width: 90%;
   box-sizing: border-box;
   border: 1px solid #aaa;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   position: relative;
+  text-align: center;
+
   /* bottom: 2px;
   padding-top: 3px;
   padding-bottom: 3px; */
 }
-@media (max-width: 400px) {
+.inputSolarQty {
+  display: block;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+  padding: 0.3em 1em 0.3em 0.3em;
+  width: 70%;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 0.3em;
+  position: relative;
+  text-align: center;
+}
+.editableQty {
+  position: relative;
+  padding-left: 30px !important;
+}
+@media (max-width: 600px) {
   .inputSolar {
-    width: 150 px;
+    width: 230px;
+  }
+  .inputSolarQty {
+    width: 230px;
+  }
+  .editableQty {
+    padding-left: 15px !important;
   }
 }

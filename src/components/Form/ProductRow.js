@@ -69,7 +69,7 @@ function ProductRow(props) {
             })}
           </DropdownButton>
         </Col>
-        <Col md={2}>
+        <Col md={2} className="editableQty">
           <EditableCell
             cellData={{
               type: 'qty',
