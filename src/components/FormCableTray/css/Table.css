@@ -1,0 +1,26 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 65%;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+  /* width: 20ch; */  
+
+}
+.tot{
+  width:28ch;
+}
+.rest{
+  width:240px;
+}
+.firsttd{
+  width: 400px;
+}
+.buttonadd{
+  width: 130px;
+  position: relative;
+  left: 4px;
+}

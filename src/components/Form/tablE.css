@@ -1,0 +1,37 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  /* width: 20ch; */
+}
+.tot {
+  width: 100px;
+}
+/* .rest{
+  width:15ch;
+} */
+.firsttd {
+  width: 400px;
+}
+.buttonadd {
+  width: 50%;
+}
+.ContainerHeader {
+  font-style: italic;
+  font-size: 18px;
+}
+.addAppliance {
+  width: 130px !important;
+}
+
+@media (max-width: 500px) {
+  .ContainerHeader {
+    font-size: 13px;
+  }
+}

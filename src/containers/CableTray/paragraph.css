@@ -1,0 +1,16 @@
+
+.p{
+  margin-left: 8px;
+}
+.cableTrayData__main{
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}
+.td{
+  position: relative;
+  margin-right: 400px;
+}
+.cableTrayData__row{
+  display: flex;
+}

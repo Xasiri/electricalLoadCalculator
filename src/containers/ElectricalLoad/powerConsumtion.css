@@ -1,0 +1,132 @@
+.powerConsumption__main {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 400px;
+}
+.powerConsumption__empty {
+  flex: 100px;
+}
+.powerConsumption__watts {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+.powerConsumption__Lineone {
+  font-size: 10px;
+  width: 200px;
+  padding: 4px;
+}
+.powerConsumption__Linetwo {
+  font-size: 18px;
+  font-weight: 800;
+  border: 1px solid black;
+  padding: 13px;
+  height: 50px;
+  width: 200px;
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.powerConsumption__Linethree {
+  font-size: 14px;
+  width: 200px;
+  height: 50px;
+  padding: 13px;
+  font-weight: bold;
+}
+.powerConsumption__Linethree2 {
+  font-size: 18px;
+  color: #e05a2d;
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  font-weight: bold;
+  padding: 13px;
+  border-radius: 4px;
+}
+.powerConsumption__Link {
+  text-decoration: none;
+  color: #e05a2d;
+}
+
+.powerConsumption__panellink {
+  position: absolute;
+  bottom: -70px;
+  left: 12px;
+}
+.firstRow {
+  font-size: 10px;
+}
+/* .Colabove1 {
+  margin-left: 0 !important;
+} */
+.Colabove2 {
+  margin-left: 2% !important;
+}
+
+.secondRow {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.box {
+  border: 1px solid black;
+  padding: 13px;
+  height: 50px;
+  width: 180px;
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  margin-left: 0% !important;
+  text-align: center;
+}
+.box_next {
+  border: 1px solid black;
+  padding: 13px;
+  height: 50px;
+  width: 180px;
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  margin-left: 2% !important;
+  text-align: center;
+}
+.box_second_row {
+  font-size: 14px;
+  width: 180px;
+  height: 50px;
+  padding: 13px;
+  font-weight: bold;
+  margin-left: 42% !important;
+  margin-bottom: 2% !important;
+  text-align: center;
+}
+.box_second_row2 {
+  font-size: 18px;
+  color: #e05a2d;
+  width: 180px;
+  height: 50px;
+  border: 1px solid black;
+  font-weight: bold;
+  padding: 13px;
+  border-radius: 4px;
+  margin-left: 2% !important;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .secondRow {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .box_second_row {
+    font-size: 10px;
+  }
+  .box_second_row2 {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,38 @@
+export const guageData=[
+{id:'10',area:'1.5', current:'18',impedence:'14.48', core:'3', diameter:'14.13',density:'448'},
+{id:'11',area:'1.5', current:'18',impedence:'14.48', core:'4', diameter:'14.95',density:'501'},
+{id:'12',area:'2.5', current:'24',impedence:'8.87', core:'3', diameter:'15.23',density:'522'},
+{id:'13',area:'2.5', current:'24',impedence:'8.87', core:'4', diameter:'16.18',density:'597'},
+{id:'14',area:'4', current:'31',impedence:'5.52', core:'3', diameter:'17.02',density:'667'},
+{id:'15',area:'4', current:'31',impedence:'5.52', core:'4', diameter:'18.39',density:'762'},
+{id:'16',area:'6', current:'39',impedence:'3.69', core:'3', diameter:'18.4',density:'790'},
+{id:'17',area:'6', current:'39',impedence:'3.69', core:'4', diameter:'19.72',density:'910'},
+{id:'18',area:'10', current:'52',impedence:'2.19', core:'3', diameter:'20.41',density:'996'},
+{id:'19',area:'10', current:'52',impedence:'2.19', core:'4', diameter:'21.96',density:'1169'},
+{id:'20',area:'16', current:'67',impedence:'1.38', core:'3', diameter:'22.37',density:'1295'},
+{id:'21',area:'16', current:'67',impedence:'1.38', core:'4', diameter:'25.92',density:'1768'},
+{id:'22',area:'25', current:'101',impedence:'0.8749', core:'3', diameter:'26.46',density:'1838'},
+{id:'23',area:'25', current:'101',impedence:'0.8749', core:'4', diameter:'28.34',density:'2196'},
+{id:'24',area:'35', current:'120',impedence:'0.6335', core:'3', diameter:'27.89',density:'2215'},
+{id:'25',area:'35', current:'120',impedence:'0.6335', core:'4', diameter:'31.17',density:'2732'},
+{id:'26',area:'50', current:'144',impedence:'0.4718', core:'3', diameter:'31.46',density:'2871'},
+{id:'27',area:'50', current:'144',impedence:'0.4718', core:'4', diameter:'36.54',density:'3893'},
+{id:'28',area:'70', current:'175',impedence:'0.3325', core:'3', diameter:'35.47',density:'3617'},
+{id:'29',area:'70', current:'175',impedence:'0.3325', core:'4', diameter:'40.09',density:'4837'},
+{id:'30',area:'95', current:'210',impedence:'0.2460', core:'3', diameter:'39.99',density:'4901'},
+{id:'31',area:'95', current:'210',impedence:'0.2460', core:'4', diameter:'44.62',density:'6115'},
+{id:'32',area:'120', current:'239',impedence:'0.2012', core:'3', diameter:'42.18',density:'5720'},
+{id:'33',area:'120', current:'239',impedence:'0.2012', core:'4', diameter:'47.4',density:'7269'},
+{id:'34',area:'150', current:'269',impedence:'0.1698', core:'3', diameter:'45.98',density:'6908'},
+{id:'35',area:'150', current:'269',impedence:'0.1698', core:'4', diameter:'52.65',density:'9250'},
+{id:'36',area:'185', current:'303',impedence:'0.1445', core:'3', diameter:'51.12',density:'8690'},
+{id:'37',area:'185', current:'303',impedence:'0.1445', core:'4', diameter:'57.45',density:'11039'},
+{id:'38',area:'240', current:'348',impedence:'0.1220', core:'3', diameter:'57.13',density:'10767'},
+{id:'39',area:'240', current:'348',impedence:'0.1220', core:'4', diameter:'64.16',density:'13726'},
+{id:'40',area:'300', current:'397',impedence:'0.1090', core:'3', diameter:'62.2',density:'12950'},
+{id:'41',area:'300', current:'397',impedence:'0.1090', core:'4', diameter:'70.13',density:'16544'},
+
+]
+
+export const cableArea=['1.5','2.5','4','6','10','16','25','35','50','70','95','120','150','185','240','300']
+export const coreCount=['3','4']
