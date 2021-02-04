@@ -38,19 +38,6 @@ function ProductRow(props) {
     []
   );
 
-  {
-    /*let Datalist = null;
-  if (isClick) {
-    Datalist = (
-      <DataListInput
-        placeholder="Select an option from the drop down menu..."
-        items={items}
-        onSelect={onSelect}
-      />
-    );
-  } */
-  }
-
   return (
     <Container>
       <Row>
