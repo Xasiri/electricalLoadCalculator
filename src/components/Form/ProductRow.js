@@ -40,7 +40,7 @@ function ProductRow(props) {
 
   return (
     <Container>
-      <Row>
+      <Row className="rowMargin">
         <Col md={3.5}>
           <DropdownButton
             className="btn"

@@ -47,6 +47,7 @@ input[list] {
   line-height: 1.3;
   padding: 0.3em 1em 0.3em 0.3em;
   width: 90%;
+  max-width: 230px;
   box-sizing: border-box;
   border: 1px solid #aaa;
   border-radius: 0.3em;
@@ -62,6 +63,7 @@ input[list] {
   line-height: 1.3;
   padding: 0.3em 1em 0.3em 0.3em;
   width: 70%;
+  max-width: 230px;
   box-sizing: border-box;
   border: 1px solid #aaa;
   border-radius: 0.3em;
@@ -72,7 +74,21 @@ input[list] {
   position: relative;
   padding-left: 30px !important;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  .inputSolar {
+    width: 100%;
+  }
+  .inputSolarQty {
+    width: 100%;
+  }
+  .editableQty {
+    padding-left: 15px !important;
+  }
+  .rowMargin {
+    margin-bottom: 2%;
+  }
+}
+@media (max-width: 750px) {
   .inputSolar {
     width: 230px;
   }
@@ -81,5 +97,8 @@ input[list] {
   }
   .editableQty {
     padding-left: 15px !important;
+  }
+  .rowMargin {
+    margin-bottom: 2%;
   }
 }

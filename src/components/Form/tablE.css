@@ -27,6 +27,7 @@ th {
   font-size: 18px;
 }
 .addAppliance {
+  margin-top: 3%;
   width: 130px !important;
 }
 .QtyHeader {
@@ -39,6 +40,14 @@ th {
     font-size: 13px;
   }
   .QtyHeader {
-    padding-left: 13px !important;
+    padding-left: 15px !important;
+  }
+}
+@media (max-width: 800px) {
+  .ContainerHeader {
+    font-size: 13px;
+  }
+  .QtyHeader {
+    padding-left: 15px !important;
   }
 }
