@@ -6,7 +6,6 @@
   flex-direction: row;
   width: 1020px;
   text-align: center;
-  /* margin-right: 250px; */
 }
 .select {
   display: block;
@@ -20,7 +19,6 @@
   max-width: 100%;
   box-sizing: border-box;
   margin: 0;
-  /* border: 1px solid #aaa; */
   box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
   border-radius: 0.5em;
   -moz-appearance: none;
@@ -63,14 +61,6 @@
   position: relative;
   bottom: 6px;
 }
-/* input[list] {
-  border: 2px solid gray;
-  border-radius: 4px 4px 4px 4px;
-  font-size: 13px;
-  padding: 5px;
-  height: 30px;
-  width: 250px;
-} */
 
 .tot {
   width: 25ch;
