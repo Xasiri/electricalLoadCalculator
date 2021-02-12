@@ -39,11 +39,10 @@ function ProductRow(props) {
   );
 
   return (
-    <Container>
+    
       <Row className="rowMargin">
-        <Col md={3.5}>
-          <DropdownButton
-            className="btn"
+        <Col md={3}>
+          <DropdownButton className="btn"
             title={props.product.name}
             id="dropdown-menu-align-right"
             onSelect={onSelect}
@@ -102,7 +101,7 @@ function ProductRow(props) {
           </button>
         </Col>
       </Row>
-    </Container>
+    
   );
 }
 

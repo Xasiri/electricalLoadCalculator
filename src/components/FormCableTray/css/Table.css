@@ -20,7 +20,17 @@ td, th {
   width: 400px;
 }
 .buttonadd{
-  width: 130px;
-  position: relative;
-  left: 4px;
+  width: 120px;
+  font-size: medium;
+ 
+}
+
+.marginSet{
+  margin-left: 0;
+  margin-right: 0;
+}
+.rowMarginSet{
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 1em;
 }

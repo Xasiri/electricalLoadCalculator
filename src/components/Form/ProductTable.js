@@ -5,7 +5,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './tablE.css';
 
-function ProductTable(props) {
+function ProductTable(props) { 
   const dispatch = useDispatch();
   let filterText = props.filterText;
   let product = props.products.map(function (product) {
@@ -15,9 +15,9 @@ function ProductTable(props) {
     return <ProductRow product={product} key={product.id} />;
   });
   return (
-    <Container className="ContainerHeader">
-      <Row>
-        <Col lg={3} md={4}>
+    <Container className="ContainerHeader" >
+      <Row className="py-2">
+        <Col lg={3} md={3}>
           Appliance
         </Col>
         <Col className="QtyHeader" md={2}>

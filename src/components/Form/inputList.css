@@ -2,7 +2,7 @@ input[list] {
   border: 2px solid gray;
   border-radius: 4px 4px 4px 4px;
   font-size: 13px;
-  padding: 5px;
+  padding: 5px; 
   height: 30px;
   width: 250px;
 }
@@ -29,15 +29,7 @@ input[list] {
   float: right;
 }
 
-.btn {
-  padding: 5px 20px;
-  width: 230px;
 
-  /* font-size: 12px;
-  text-align: left;
-  position: relative;
-  left: -13px; */
-}
 .inputSolar {
   display: block;
   font-size: 15px;
@@ -73,13 +65,17 @@ input[list] {
 .editableQty {
   position: relative;
   padding-left: 30px !important;
+
 }
-@media (max-width: 800px) {
+/* 
+*/
+
+@media (min-width: 350px) {
   .inputSolar {
-    width: 100%;
+    width: 230px;
   }
   .inputSolarQty {
-    width: 100%;
+    width: 230px;
   }
   .editableQty {
     padding-left: 15px !important;
@@ -87,8 +83,13 @@ input[list] {
   .rowMargin {
     margin-bottom: 2%;
   }
+  .delete__Button {
+    left: 220px;
+  }
+  
 }
-@media (max-width: 750px) {
+
+@media (min-width: 500px) {
   .inputSolar {
     width: 230px;
   }
@@ -102,3 +103,64 @@ input[list] {
     margin-bottom: 2%;
   }
 }
+@media (min-width: 768px) {
+  .inputSolar {
+    width: 100%;
+  }
+  .inputSolarQty {
+    width: 100%;
+  }
+  .editableQty {
+    padding-left: 15px !important;
+  }
+  .rowMargin {
+    margin-bottom: 2%;
+  }
+  .btn {
+    padding: 5px 20px;
+    width: 150px;
+      
+  }
+  .delete__Button {
+    left: 3px;
+  }
+}
+@media (min-width: 992px) {
+  .inputSolar {
+    width: 100%;
+  }
+  .inputSolarQty {
+    width: 100%;
+  }
+  .editableQty {
+    padding-left: 15px !important;
+  }
+  .rowMargin {
+    margin-bottom: 2%;
+  }
+  .btn {
+    padding: 5px 20px;
+    width: 220px;
+      
+  }
+}
+@media (min-width: 1200px) {
+  .inputSolar {
+    width: 100%;
+  }
+  .inputSolarQty {
+    width: 100%;
+  }
+  .editableQty {
+    padding-left: 15px !important;
+  }
+  .rowMargin {
+    margin-bottom: 2%;
+  }
+  .btn {
+    padding: 5px 20px;
+    width: 230px;
+      
+  }
+}
+

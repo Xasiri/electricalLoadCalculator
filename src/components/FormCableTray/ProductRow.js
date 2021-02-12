@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import EditableCell from './EditableCell';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+
 import { cableArea, coreCount } from './CableGuageData';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import './css/Input.css';
@@ -27,44 +29,42 @@ function ProductRow(props) {
   };
 
   return (
-    <div className="cabletray__main">
-      <span className="cabletray__row">
-        <span>
-          <EditableCell
-            className="name"
-            cellData={{
+     <Row >
+    <Col md={3}>
+    <EditableCell
+              cellData={{
               type: 'quantity',
               value: props.product.quantity,
               id: props.product.id,
             }}
           />
-        </span>
-        <span>
-          <form>
+    </Col>
+    <Col md={3}>
+    <form>
             <select className="select" onChange={handleChange} name="area">
               {cableArea.map((area) => {
                 return <option value={area}>{area}</option>;
               })}
             </select>
           </form>
-        </span>
-        <span>
-          <form>
+    </Col>
+    <Col md={3}>
+    <form>
             <select className="select" onChange={handleChange} name="core">
               {coreCount.map((core) => {
                 return <option value={core}>{core}</option>;
               })}
             </select>
           </form>
-        </span>
-
-        <span>
-          <button className="delete" onClick={deleteHandler}>
+    </Col>
+    <Col md={3}>
+    <button className="delete" onClick={deleteHandler}>
             <AiOutlineCloseCircle size="1.5em" color="orange" />
           </button>
-        </span>
-      </span>
-    </div>
+    </Col>
+    </Row>
+    
+   
   );
 }
 

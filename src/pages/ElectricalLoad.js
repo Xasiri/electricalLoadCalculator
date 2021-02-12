@@ -6,12 +6,12 @@ import './panel.css';
 
 const ElectricalLoad = () => {
   return (
-    <Container className="electricalLoad__main" fluid="md">
+    <div className="electricalLoad__main" >
       <h1>Power Consumption Calculator</h1>
       <Form />
 
-      <TotalPowerConsumption />
-    </Container>
+      <TotalPowerConsumption /> 
+    </div>
   );
 };
 export default ElectricalLoad;

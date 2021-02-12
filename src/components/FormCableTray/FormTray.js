@@ -7,7 +7,6 @@ import CableTrayData from '../../containers/CableTray/CableTrayData'
 const FormTray = () => {
   const filter = useSelector(state => state.filter)
   const cables = useSelector(state => state.cables)
-  console.log('APP-table',cables)
 
   return ( 
     <div>

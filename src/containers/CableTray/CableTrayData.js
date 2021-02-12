@@ -28,7 +28,7 @@ const CableTrayData = ({products}) =>{
 
   const validationStateHandler=()=>{
     setIsDataAvailable(true)
-  }
+  } 
 
 
   let cableCalculatedData = cableCalculationHandler(cableDataArray)

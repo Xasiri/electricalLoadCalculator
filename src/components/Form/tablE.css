@@ -8,34 +8,61 @@ td,
 th {
   text-align: left;
   padding: 8px;
-  /* width: 20ch; */
 }
 .tot {
   width: 100px;
 }
-/* .rest{
-  width:15ch;
-} */
 .firsttd {
   width: 400px;
 }
 .buttonadd {
   width: 50%;
 }
-.ContainerHeader {
-  font-style: italic;
-  font-size: 18px;
-}
 .addAppliance {
   margin-top: 3%;
   width: 130px !important;
 }
-.QtyHeader {
-  position: relative;
-  padding-left: 30px !important;
+
+@media (min-width: 350px) {
+  .ContainerHeader {
+    font-size: 13px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .QtyHeader {
+    padding-left: 15px !important;
+  }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 500px) {
+  .electricalLoad__main h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .ContainerHeader {
+    font-size: 13px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 10px !important;
+  
+  }
+  .QtyHeader {
+    padding-left: 25px !important;
+  }
+}
+@media (min-width: 992px) {
+  .ContainerHeader {
+    font-size: 13px;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+  .QtyHeader {
+    padding-left: 10px !important;
+  }
+}
+@media (min-width: 1200px) {
   .ContainerHeader {
     font-size: 13px;
   }
@@ -43,11 +70,5 @@ th {
     padding-left: 15px !important;
   }
 }
-@media (max-width: 800px) {
-  .ContainerHeader {
-    font-size: 13px;
-  }
-  .QtyHeader {
-    padding-left: 15px !important;
-  }
-}
+
+
