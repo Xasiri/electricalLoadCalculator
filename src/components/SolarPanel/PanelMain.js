@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import {Container,Col,Row,Card} from 'react-bootstrap'
 import { useLocation } from 'react-router-dom';
 import PanelInput from './PanelInput';
 import {
@@ -63,36 +63,37 @@ const PanelMain = () => {
     numberofStringofPanel
   );
 
-  console.log('calculation', sizeofPanel, KWh);
   return (
-    <div>
+    <Container>
+      <Card>
       <PanelInput panelSizing={panelSizing} consumptionData={consumptionData} />
-      <tr>
-        <td>Total size of panel(W)</td>
-        <td>: {sizeofPanel}</td>
-      </tr>
+      </Card>
+      <Card>
+      <Row> <Col>Total size of panel(W)</Col>
+        <Col>: {sizeofPanel}</Col>
+      </Row>
 
-      <tr>
-        <td>No of String of Solar Panel </td>
-        {<td>: {noofPanelinEachString} No’s</td>}
-      </tr>
-      <tr>
-        <td>No of String of Solar Panel </td>
-        {<td>: {numberofStringofPanel} No’s</td>}
-      </tr>
-      <tr>
-        <td>Total No of Solar Panel </td>
-        {<td>: {totalNoofSolarPanels} No’s</td>}
-      </tr>
-      <tr>
-        <td>Size of Inverter </td>
+      <Row>
+        <Col>No of String of Solar Panel </Col>
+        {<Col>: {noofPanelinEachString} No’s</Col>}
+      </Row>
+      <Row>
+        <Col>No of String of Solar Panel </Col>
+        {<Col>: {numberofStringofPanel} No’s</Col>}
+      </Row>
+      <Row>       <Col>Total No of Solar Panel </Col>
+        {<Col>: {totalNoofSolarPanels} No’s</Col>}
+      </Row>
+      <Row>
+        <Col>Size of Inverter </Col>
         {
-          <td>
+          <Col>
             : {sizeofInverter.watt} watt or {sizeofInverter.VA} VA
-          </td>
+          </Col>
         }
-      </tr>
-    </div>
+      </Row>
+      </Card>
+    </Container>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch} from 'react-redux'
+import {FormControl} from 'react-bootstrap'
 
 
 const InputCell = (props) => {
@@ -7,7 +8,7 @@ const InputCell = (props) => {
 
 
   return (
-    <input
+    <FormControl className='w-50'
       // onChange={addHandler}
         id={props.id} 
         name={props.type} 

@@ -1,15 +1,16 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
+import {FormControl,InputGroup} from 'react-bootstrap'
+
 
 const EditableCell = (props) => {
   
   const dispatch = useDispatch()
-  console.log('editable Cell', props.cellData.value)
   return (
-    
-      <input 
+    <InputGroup className='w-50'>
+      <FormControl 
         type='text' 
-        value={props.cellData.value} 
+        value={props.cellData.value}  
         name={props.cellData.name} 
         onChange ={(evt) => {
           dispatch({
@@ -20,6 +21,7 @@ const EditableCell = (props) => {
           }
         })
       }}/>
+      </InputGroup>
     
   );
 }

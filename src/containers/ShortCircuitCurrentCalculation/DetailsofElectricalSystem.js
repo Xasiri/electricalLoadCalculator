@@ -1,43 +1,44 @@
 import React from 'react'
+import {Card,Col,Row} from 'react-bootstrap'
 import InputCell from './InputCell'
+import './card.css'
 
 const DetailsofElectricalSystem = (props) => {
   return (
-    <div>
-      <table>
-      <tr><th>Details of Electrical System SLD</th></tr>
-      <tr><td>Main Incoming HT Supply Voltage (KV)</td> 
-        <td><InputCell 
+    <Card  className='card'>
+      <Card.Body>
+      <Row className='mb-2'><Card.Title>Details of Electrical System SLD</Card.Title></Row>
+      <Row className='mb-2'><Col lg='7'>Main Incoming HT Supply Voltage (KV)</Col> 
+        <Col><InputCell 
               id={props.id} 
               value={props.cable[0].property[0].value}
               type ="mainHTVolatage"
-        /></td> </tr>
-      <tr> <td>Fault Level at HT Incoming Power Supply (MVA)</td> 
-        <td><InputCell
+        /></Col> </Row>
+      <Row className='mb-2'> <Col lg='7'>Fault Level at HT Incoming Power Supply (MVA)</Col> 
+        <Col><InputCell
               id={props.id}
               value={props.cable[0].property[1].value}
 
               type ="fualtLevelHTSupply"
-        /></td> </tr>
-      <tr><td>Transformer Rating (MVA)</td> 
-        <td><InputCell
+        /></Col> </Row>
+      <Row className='mb-2'><Col lg='7'>Transformer Rating (MVA)</Col> 
+        <Col><InputCell
               id={props.id}
               value={props.cable[0].property[2].value}
-
               type ="transformerMVA"
-        /></td> </tr>
-      <tr><td>Transformer Impedance (%)</td> 
-        <td><InputCell
+        /></Col> </Row>
+      <Row className='mb-2'><Col lg='7'>Transformer Impedance (%)</Col> 
+        <Col><InputCell
               id={props.id}
               value={props.cable[0].property[3].value}
 
               type ="transformerImpedence"
-        /></td> </tr>
+        /></Col> </Row>
       
 
-      </table>
+      </Card.Body>
       
-    </div>
+    </Card>
   )
 }
 

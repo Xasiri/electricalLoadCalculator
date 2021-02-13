@@ -11,6 +11,6 @@
   position: relative;
   margin-right: 400px;
 }
-.cableTrayData__row{
+.cableTrayData__row{ 
   display: flex;
 }

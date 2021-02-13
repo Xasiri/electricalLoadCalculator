@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import TrayValidation from './TrayValidation'
 import {cableCalculationHandler} from '../../containers/CableTray/calculation/TrayCalculation'
-import Button from 'react-bootstrap/Button';
+import {Button,Container,Col,Row,InputGroup,FormControl,Card} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './paragraph.css'
 
@@ -16,14 +16,12 @@ const CableTrayData = ({products}) =>{
   const [isDataAvailable, setIsDataAvailable ] = useState(false);
 
   let cableDataArray = [...products]
-  console.log('cables',products)
 
   const traySizeHandler = (e, field) =>{
     const value = e.target.value;
     setTrayData({
       ...trayData,field:value
     })
-    console.log('traySizeHandler', value, [e.target.name])
   }
 
   const validationStateHandler=()=>{
@@ -34,74 +32,85 @@ const CableTrayData = ({products}) =>{
   let cableCalculatedData = cableCalculationHandler(cableDataArray)
 
   return(
-    <div className="cableTrayData__main">   
-              <tr> 
-              <td className="td">Size of Cable Tray(mm)</td>
-              <span className="cableTrayData__row">:  <input className="input"
-              onChange={(event) =>traySizeHandler(event,"width")}
-              type="number" 
-              id="quantity" 
-              name="width" 
-              min="0" 
-              defaultValue='250'
-
-              />
-            <label >x</label>
-
-            <input className="input"
-              onChange={(event) =>traySizeHandler(event,"height")}
-              type="number" 
-              id="quantity" 
-              name="height" 
-              min="0" 
-              defaultValue='100'
-              /></span>
-              </tr>
-              <tr>
-              <td>Weight of Cable Tray(Kg/mt)</td>
-              <span className="cableTrayData__row">:<input className="input"
-              onChange={(event) =>traySizeHandler(event,"weight")}
-              type="number" 
-              id="quantity" 
-              name="weight" 
-              min="0" 
-              defaultValue='25'
-              /> </span>
-              </tr>
-
-              <tr>
-              <td>No of Cable Tray Run</td>
-              <span className="cableTrayData__row">: <input className="input"
-              onChange={(event) =>traySizeHandler(event,"run")}
-              type="number" 
-              id="quantity" 
-              name="run" 
-              min="0" 
-              defaultValue='1'
-
-              /></span>
-              </tr>
-  
-              <tr>
-                <td>No of layers of cables in Cable tray</td>
-                <span className="cableTrayData__row">: <input className="input"
-                onChange={(event) =>traySizeHandler(event,"layers")}
+    <Container >  
+      <Card> 
+              <Row> 
+              <Col >Size of Cable Tray(mm)</Col>
+              <Col>
+              <InputGroup className="mb-3 w-50">
+                <InputGroup.Prepend>
+                </InputGroup.Prepend>
+                <FormControl onChange={(event) =>traySizeHandler(event,"width")} 
+                  type="number" 
+                            id="quantity" 
+                            name="width" 
+                            min="0" 
+                            defaultValue='250'/>
+                <FormControl 
+                onChange={(event) =>traySizeHandler(event,"height")}
                 type="number" 
                 id="quantity" 
-                name="layers" 
-                min="0"
-                defaultValue='1'
-                /></span>
-              </tr>
+                name="height" 
+                min="0" 
+                defaultValue='100'/>
+              </InputGroup>
+              
+              </Col>                 
+              
+              </Row>
+              <Row className="mb-3">
+              <Col>Weight of Cable Tray(Kg/mt)</Col>
+              <Col>
+             
+                <FormControl className='w-50'  onChange={(event) =>traySizeHandler(event,"weight")}
+                  type="number" 
+                  id="quantity" 
+                  name="weight" 
+                  min="0" 
+                  defaultValue='25'/>
+             
+              
+              </Col>   
+           
+              </Row>
 
-<p className="p">Check for Validation</p>
+              <Row className="mb-3">
+              <Col>No of Cable Tray Run</Col>
+              <Col>
+              <FormControl className='w-50'   onChange={(event) =>traySizeHandler(event,"run")}
+                    type="number" 
+                    id="quantity" 
+                    name="run" 
+                    min="0" 
+                    defaultValue='1'/>             
+              </Col>
+              </Row>
+<Row className="mb-3">
+                <Col>No of layers of cables in Cable tray</Col>
+                <Col>
+                <FormControl className='w-50'   onChange={(event) =>traySizeHandler(event,"layers")}
+                   type="number" 
+                   id="quantity" 
+                   name="layers" 
+                   min="0"
+                   defaultValue='1'/>   
+               </Col>
+</Row>
+
+<Row className="mb-3"><Col> Check for Validation</Col></Row>
+<Row><Col>
 <Button onClick={() =>validationStateHandler()}>Check for validation</Button>
+</Col>
+</Row>
+</Card>
 {isDataAvailable && 
+<Card>
   <TrayValidation
        trayData={trayData}
        cableCalculatedData={cableCalculatedData}  
-  />}
+  /></Card>}
+  
 
-     </div>  )
+     </Container>  )
 }
 export default CableTrayData

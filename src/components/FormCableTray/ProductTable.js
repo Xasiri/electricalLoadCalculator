@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch} from 'react-redux'
 import ProductRow from './ProductRow'
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button,Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/Table.css'
 
@@ -16,8 +16,9 @@ function ProductTable(props) {
     return (<ProductRow product={product} key={product.id}/>)
   });
   return (
-      
-      <Container className="marginSet">
+      <Container >
+      <Card>
+      <Card.Title>
       <Row className="py-2">
         <Col lg={3} md={3}>
           Quantity
@@ -28,6 +29,7 @@ function ProductTable(props) {
         <Col md={3}>Core Count</Col>
         
       </Row>
+      </Card.Title>
      
        {product}
         <Row className="rowMarginSet">
@@ -41,8 +43,9 @@ function ProductTable(props) {
       })} >Add Cable</Button>
 
         </Row>
-     
+        </Card>
       </Container> 
+      
       
      
    

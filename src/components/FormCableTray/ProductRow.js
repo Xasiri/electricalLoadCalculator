@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import EditableCell from './EditableCell';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Row, Col ,FormControl,InputGroup,Card} from 'react-bootstrap';
 
 import { cableArea, coreCount } from './CableGuageData';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
@@ -10,7 +10,6 @@ import './css/Input.css';
 
 function ProductRow(props) {
   const dispatch = useDispatch();
-  console.log('delete table', props);
 
   const deleteHandler = () => {
     dispatch({ type: 'DELETE_CABLE', id: props.product.id });
@@ -25,11 +24,10 @@ function ProductRow(props) {
         name: event.target.name,
       },
     });
-    console.log('Handle', event.target.value, event.target.name);
   };
 
   return (
-     <Row >
+     <Row className="mb-2">
     <Col md={3}>
     <EditableCell
               cellData={{
@@ -40,22 +38,21 @@ function ProductRow(props) {
           />
     </Col>
     <Col md={3}>
-    <form>
-            <select className="select" onChange={handleChange} name="area">
-              {cableArea.map((area) => {
+    <FormControl as="select"  onChange={handleChange} name="area">
+                 {cableArea.map((area) => {
                 return <option value={area}>{area}</option>;
               })}
-            </select>
-          </form>
+           
+            </FormControl>
     </Col>
     <Col md={3}>
-    <form>
-            <select className="select" onChange={handleChange} name="core">
+    <FormControl as='select'  onChange={handleChange} name="core">
+            
               {coreCount.map((core) => {
                 return <option value={core}>{core}</option>;
               })}
-            </select>
-          </form>
+           
+          </FormControl>
     </Col>
     <Col md={3}>
     <button className="delete" onClick={deleteHandler}>
