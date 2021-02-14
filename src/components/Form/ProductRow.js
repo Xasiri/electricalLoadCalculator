@@ -5,7 +5,7 @@ import { applianceData } from './applianceData';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { DropdownButton, Dropdown, Container, Row, Col } from 'react-bootstrap';
-import './inputList.css';
+import styles from './inputList.module.css';
 
 function ProductRow(props) {
   const [isClick, setIsClick] = useState(false);
@@ -43,7 +43,7 @@ function ProductRow(props) {
       <Row className='mb-1'>
         <Col md={3}>
           <DropdownButton 
-            className='dropdownbutton'
+            className={styles.dropdownbutton}
             title={props.product.name}
             id="dropdown-menu-align-right"
             onSelect={onSelect}
@@ -56,7 +56,7 @@ function ProductRow(props) {
             })}
           </DropdownButton>
         </Col>
-        <Col md={2} className='qtyColumn1'>
+        <Col  sm={3} md={2} className={styles.qtyColumn1}>
           <EditableCell
             cellData={{
               type: 'qty',
@@ -65,7 +65,7 @@ function ProductRow(props) {
             }}
           />
         </Col>
-        <Col md={2}  >
+        <Col sm={3} md={2}  >
           <EditableCell
             cellData={{
               type: 'watts',
@@ -74,7 +74,7 @@ function ProductRow(props) {
             }}
           />
         </Col>
-        <Col md={2} >
+        <Col sm={3} md={2} >
           <EditableCell
             cellData={{
               type: 'hours',
@@ -83,7 +83,7 @@ function ProductRow(props) {
             }}
           />
         </Col>
-        <Col md={2} >
+        <Col sm={3} md={2} >
           <EditableCell
             cellData={{
               type: 'wattHoursPerDay',
@@ -93,8 +93,8 @@ function ProductRow(props) {
             }}
           />
         </Col>
-        <Col md={0.5}  className='mt-1'>
-          <button className="delete__Button" onClick={deleteHandler}>
+        <Col  md={0.5}  className='mt-1'>
+          <button className={styles.deleteButton} onClick={deleteHandler}>
             <AiOutlineCloseCircle size="1.5em" color="orange" />
           </button>
         </Col>

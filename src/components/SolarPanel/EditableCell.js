@@ -7,7 +7,7 @@ const EditableCell = (props) => {
   
   const dispatch = useDispatch()
   return (
-    <InputGroup className='w-50'>
+    <InputGroup >
       <FormControl 
         type='text' 
         value={props.cellData.value}  

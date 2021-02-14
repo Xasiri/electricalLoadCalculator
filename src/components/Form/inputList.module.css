@@ -19,7 +19,7 @@ input[list] {
   width: 250px;
   text-align: left;
 }
-.delete__Button {
+.deleteButton {
   background-color: white;
   border: none;
   position: relative;
@@ -69,7 +69,7 @@ input[list] {
 }
 /* 
 */
-.form-control{
+.formControl{
   height: 2rem !important;
   width: 80% !important;
 
@@ -94,7 +94,7 @@ input[list] {
   .delete__Button {
     left: 220px;
   }
-  .form-control{
+  .formControl{
     margin-left: 0 !important;
   }
   
@@ -132,12 +132,11 @@ input[list] {
     width: 150px;
       
   }
-  .delete__Button {
+  .deleteButton {
     left: 3px;
   }
   .qtyColumn1{
     margin-left: 15px !important;
-    
   }
 }
 @media (min-width: 992px) {

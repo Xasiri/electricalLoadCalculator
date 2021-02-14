@@ -34,10 +34,10 @@ const CableTrayData = ({products}) =>{
   return(
     <Container >  
       <Card> 
-              <Row> 
-              <Col >Size of Cable Tray(mm)</Col>
-              <Col>
-              <InputGroup className="mb-3 w-50">
+              <Row className='mb-2'> 
+              <Col md lg='6'md lg='6'>Size of Cable Tray(mm)</Col>
+              <Col md lg='3'>
+              <InputGroup   >
                 <InputGroup.Prepend>
                
                 <FormControl onChange={(event) =>traySizeHandler(event,"width")} 
@@ -59,11 +59,11 @@ const CableTrayData = ({products}) =>{
               </Col>                 
               
               </Row>
-              <Row className="mb-3">
-              <Col>Weight of Cable Tray(Kg/mt)</Col>
-              <Col>
+              <Row className="mb-2">
+              <Col md lg='6'>Weight of Cable Tray(Kg/mt)</Col>
+              <Col md lg='3'>
              
-                <FormControl className='w-50'  onChange={(event) =>traySizeHandler(event,"weight")}
+                <FormControl  onChange={(event) =>traySizeHandler(event,"weight")}
                   type="number" 
                   id="quantity" 
                   name="weight" 
@@ -75,10 +75,10 @@ const CableTrayData = ({products}) =>{
            
               </Row>
 
-              <Row className="mb-3">
-              <Col>No of Cable Tray Run</Col>
-              <Col>
-              <FormControl className='w-50'   onChange={(event) =>traySizeHandler(event,"run")}
+              <Row className="mb-2">
+              <Col md lg='6'>No of Cable Tray Run</Col>
+              <Col md lg='3'>
+              <FormControl    onChange={(event) =>traySizeHandler(event,"run")}
                     type="number" 
                     id="quantity" 
                     name="run" 
@@ -86,10 +86,10 @@ const CableTrayData = ({products}) =>{
                     defaultValue='1'/>             
               </Col>
               </Row>
-<Row className="mb-3">
-                <Col>No of layers of cables in Cable tray</Col>
-                <Col>
-                <FormControl className='w-50'   onChange={(event) =>traySizeHandler(event,"layers")}
+<Row className="mb-2">
+                <Col md lg='6'>No of layers of cables in Cable tray</Col>
+                <Col md lg='3'>
+                <FormControl    onChange={(event) =>traySizeHandler(event,"layers")}
                    type="number" 
                    id="quantity" 
                    name="layers" 
@@ -98,7 +98,7 @@ const CableTrayData = ({products}) =>{
                </Col>
 </Row>
 
-<Row className="mb-3"><Col> Check for Validation</Col></Row>
+<Row className="mb-2"><Col> Check for Validation</Col></Row>
 <Row><Col>
 <Button onClick={() =>validationStateHandler()}>Check for validation</Button>
 </Col>
