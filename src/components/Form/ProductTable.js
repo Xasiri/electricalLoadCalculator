@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import ProductRow from './ProductRow';
 import { Container, Row, Col, Button,Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './tablE.css';
+import styles from './productTable.module.css';
 
 function ProductTable(props) { 
   const dispatch = useDispatch();
@@ -15,25 +15,25 @@ function ProductTable(props) {
     return <ProductRow product={product} key={product.id} />;
   });
   return (
-    <Container className="ContainerHeader" >
-      <Card>
+    <Container className={styles.ContainerHeader} >
+      <Card className={styles.card}>
       <Row className="py-2">
         <Col lg={3} md={3}>
           Appliance
         </Col>
-        <Col md={2}>
+        <Col md={2} className={styles.columnHeader}>
           Quantity
         </Col>
-        <Col md={2}>Watts</Col>
-        <Col md={2}>Hours on per Day</Col>
-        <Col md={2}>Watts Hours per Day</Col>
+        <Col md={2} className={styles.columnHeader}>Watts</Col>
+        <Col md={2} className={styles.columnHeader}>Hours on per Day</Col>
+        <Col md={2} className={styles.columnHeader}>Watts Hours per Day</Col>
       </Row>
-      <Row>{product}</Row>
+      {product}
       <Row>
         <Col md={1}>
           <Button
             variant="outline-danger"
-            className="addAppliance"
+            className={styles.addAppliance}
             type="button"
             onClick={() =>
               dispatch({

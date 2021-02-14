@@ -96,6 +96,7 @@ input[list] {
   }
   .formControl{
     margin-left: 0 !important;
+    width: 230px !important;
   }
   
 }
@@ -137,6 +138,10 @@ input[list] {
   }
   .qtyColumn1{
     margin-left: 15px !important;
+  }
+  .formControl{
+    width: 80% !important;
+
   }
 }
 @media (min-width: 992px) {
