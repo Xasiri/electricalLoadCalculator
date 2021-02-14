@@ -3,10 +3,9 @@ import InputCell from './InputCell'
 import {Card,Col,Row} from 'react-bootstrap'
 import './card.css'
 
-
 const DetailsofHTandLT = (props) => {
   return ( 
-    <Card  className='card'>
+    <Card className='card' >
     <Card.Body >
     <Row  className='mb-2'><Card.Title>HT and LT Side details</Card.Title></Row> 
      <Row className='mb-2'>

@@ -1,13 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import {FormControl} from 'react-bootstrap'
 import './inputList.css';
 
 function EditableCell(props) {
   const dispatch = useDispatch();
 
   return (
-    <input
-      className={props.cellData.type === 'qty' ? 'inputSolarQty' : 'inputSolar'}
+    <FormControl className='form-control'
+     
       type="text"
       id={props.cellData.id}
       value={props.cellData.value}

@@ -1,15 +1,11 @@
 import React from 'react'
 import InputCell from './InputCell'
 import {Card,Col,Row} from 'react-bootstrap'
-import './card.css'
-
-
-import './table.css'
 
 const CableDetails = (props) => {
   console.log('CableDetais', props.cableData[0])
   return (
-    <Card  className='card'>
+    <Card  >
     <Card.Body>
     
     <Row className='mb-2'><Card.Title>{props.stage}</Card.Title></Row>

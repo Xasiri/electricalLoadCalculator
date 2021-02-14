@@ -1,11 +1,10 @@
 import React from 'react'
 import {Card,Col,Row} from 'react-bootstrap'
 import InputCell from './InputCell'
-import './card.css'
 
 const DetailsofElectricalSystem = (props) => {
   return (
-    <Card  className='card'>
+    <Card  >
       <Card.Body>
       <Row className='mb-2'><Card.Title>Details of Electrical System SLD</Card.Title></Row>
       <Row className='mb-2'><Col lg='7'>Main Incoming HT Supply Voltage (KV)</Col> 

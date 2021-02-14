@@ -8,7 +8,7 @@ const ShortCircuitCalc = () => {
     <Card> <Card.Header as='h5'>Short Circuit Current Calculation (Base KVA Method)</Card.Header></Card>
     <SystemInputs/>
          
-    </div>
+    </div> 
   )
 }
 

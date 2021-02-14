@@ -129,14 +129,12 @@
 }
 @media (min-width: 768px) {
   .btn {
-    padding: 5px 20px;
+    padding: 5px 10px;
     width: 175px;
       /* padding: 5px 20px; */
     font-size: 10px;
     text-align: left;
     /* position: relative; */
-    top: -7px;
-    left: -3px; 
     
   }
 }

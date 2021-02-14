@@ -4,8 +4,8 @@ import './nav.css';
 
 function Navigation() {
   return (
-    <Navbar bg="dark" variant="dark">
-      <Nav className="mr-auto">
+    <Navbar bg="dark" variant="dark" className='navbarFonts'>
+      <Nav >
         <Nav.Link href="/">Power Consumption Calculator</Nav.Link>
         <Nav.Link href="solar-panel-sizing">Solar Panel Sizing</Nav.Link>
         <Nav.Link href="cable-tray-calculator">Tray Calculator</Nav.Link>

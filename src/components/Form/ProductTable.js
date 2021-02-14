@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import ProductRow from './ProductRow';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button,Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './tablE.css';
 
@@ -16,6 +16,7 @@ function ProductTable(props) {
   });
   return (
     <Container className="ContainerHeader" >
+      <Card>
       <Row className="py-2">
         <Col lg={3} md={3}>
           Appliance
@@ -53,6 +54,7 @@ function ProductTable(props) {
           </Button>{' '}
         </Col>
       </Row>
+      </Card>
     </Container>
   );
 }

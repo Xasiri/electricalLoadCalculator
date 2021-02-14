@@ -40,9 +40,10 @@ function ProductRow(props) {
 
   return (
     
-      <Row className="rowMargin">
+      <Row className='mb-1'>
         <Col md={3}>
-          <DropdownButton className="btn"
+          <DropdownButton 
+            className='dropdownbutton'
             title={props.product.name}
             id="dropdown-menu-align-right"
             onSelect={onSelect}
@@ -50,12 +51,12 @@ function ProductRow(props) {
             {' '}
             {applianceData.map((item) => {
               return (
-                <Dropdown.Item eventKey={item.name}>{item.name}</Dropdown.Item>
+                <Dropdown.Item className='w-100 hover-shadow' eventKey={item.name}>{item.name}</Dropdown.Item>
               );
             })}
           </DropdownButton>
         </Col>
-        <Col md={2} className="editableQty">
+        <Col md={2} className='qtyColumn1'>
           <EditableCell
             cellData={{
               type: 'qty',
@@ -64,9 +65,8 @@ function ProductRow(props) {
             }}
           />
         </Col>
-        <Col md={2}>
+        <Col md={2}  >
           <EditableCell
-            className="power"
             cellData={{
               type: 'watts',
               value: props.product.watts,
@@ -74,9 +74,8 @@ function ProductRow(props) {
             }}
           />
         </Col>
-        <Col md={2}>
+        <Col md={2} >
           <EditableCell
-            className="power"
             cellData={{
               type: 'hours',
               value: props.product.hours,
@@ -84,9 +83,8 @@ function ProductRow(props) {
             }}
           />
         </Col>
-        <Col md={2}>
+        <Col md={2} >
           <EditableCell
-            className="power"
             cellData={{
               type: 'wattHoursPerDay',
               value:
@@ -95,7 +93,7 @@ function ProductRow(props) {
             }}
           />
         </Col>
-        <Col md={0.5}>
+        <Col md={0.5}  className='mt-1'>
           <button className="delete__Button" onClick={deleteHandler}>
             <AiOutlineCloseCircle size="1.5em" color="orange" />
           </button>
