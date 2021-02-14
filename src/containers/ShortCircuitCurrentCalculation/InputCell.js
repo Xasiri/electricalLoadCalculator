@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch} from 'react-redux'
-import {FormControl} from 'react-bootstrap'
+import {FormControl,InputGroup} from 'react-bootstrap'
+import './card.css'
 
 
 const InputCell = (props) => {
@@ -8,6 +9,7 @@ const InputCell = (props) => {
 
 
   return (
+    <InputGroup>
     <FormControl
       // onChange={addHandler}
         id={props.id} 
@@ -24,7 +26,11 @@ const InputCell = (props) => {
         })
       }}
     
-    />
+      />
+       <InputGroup.Append>
+      <InputGroup.Text className='inputGroupWidth'>{props.append}</InputGroup.Text>
+    </InputGroup.Append>
+    </InputGroup>
   )
 }
 

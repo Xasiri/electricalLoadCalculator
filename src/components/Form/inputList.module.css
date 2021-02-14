@@ -2,7 +2,7 @@ input[list] {
   border: 2px solid gray;
   border-radius: 4px 4px 4px 4px;
   font-size: 13px;
-  padding: 5px; 
+  padding: 5px;
   height: 30px;
   width: 250px;
 }
@@ -28,7 +28,6 @@ input[list] {
 .button .icon {
   float: right;
 }
-
 
 .inputSolar {
   display: block;
@@ -65,14 +64,12 @@ input[list] {
 .editableQty {
   position: relative;
   padding-left: 30px !important;
-
 }
 /* 
 */
-.formControl{
+.formControl {
   height: 2rem !important;
   width: 80% !important;
-
 }
 /* .qtyColumn1{
   margin-top: 1%;
@@ -94,11 +91,15 @@ input[list] {
   .delete__Button {
     left: 220px;
   }
-  .formControl{
+  .editableCell {
     margin-left: 0 !important;
     width: 230px !important;
+    height: 70%;
+    margin-bottom: 0.5rem;
   }
-  
+  .editableCell__inputText {
+    width: 70px;
+  }
 }
 
 @media (min-width: 500px) {
@@ -113,6 +114,9 @@ input[list] {
   }
   .rowMargin {
     margin-bottom: 2%;
+  }
+  .formControl {
+    width: 100% !important;
   }
 }
 @media (min-width: 768px) {
@@ -131,17 +135,15 @@ input[list] {
   .btn {
     padding: 5px 20px;
     width: 150px;
-      
   }
   .deleteButton {
     left: 3px;
   }
-  .qtyColumn1{
+  .qtyColumn1 {
     margin-left: 15px !important;
   }
-  .formControl{
+  .formControl {
     width: 80% !important;
-
   }
 }
 @media (min-width: 992px) {
@@ -159,12 +161,12 @@ input[list] {
   }
   .btn {
     padding: 5px 20px;
-    width: 220px;      
+    width: 220px;
   }
-  .qtyColumn1{
+  .qtyColumn1 {
     margin-left: 15px !important;
   }
-  .dropdownbutton{
+  .dropdownbutton {
     margin-top: 0.1rem;
   }
 }
@@ -183,10 +185,9 @@ input[list] {
   }
   .btn {
     padding: 5px 20px;
-    width: 230px;      
+    width: 230px;
   }
-  .dropdownbutton{
+  .dropdownbutton {
     margin-top: 0.1rem;
   }
 }
-
