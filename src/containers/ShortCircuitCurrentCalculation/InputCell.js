@@ -8,7 +8,7 @@ const InputCell = (props) => {
 
 
   return (
-    <FormControl className='w-50'
+    <FormControl
       // onChange={addHandler}
         id={props.id} 
         name={props.type} 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card,Col,Row} from 'react-bootstrap'
+import {Card,Col,Row,InputGroup} from 'react-bootstrap'
 import InputCell from './InputCell'
 
 const DetailsofElectricalSystem = (props) => {

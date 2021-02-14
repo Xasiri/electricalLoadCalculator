@@ -39,7 +39,7 @@ const CableTrayData = ({products}) =>{
               <Col>
               <InputGroup className="mb-3 w-50">
                 <InputGroup.Prepend>
-                </InputGroup.Prepend>
+               
                 <FormControl onChange={(event) =>traySizeHandler(event,"width")} 
                   type="number" 
                             id="quantity" 
@@ -47,12 +47,13 @@ const CableTrayData = ({products}) =>{
                             min="0" 
                             defaultValue='250'/>
                 <FormControl 
-                onChange={(event) =>traySizeHandler(event,"height")}
+                onChange={(event) =>traySizeHandler(event,"height")} 
                 type="number" 
                 id="quantity" 
                 name="height" 
                 min="0" 
                 defaultValue='100'/>
+                 </InputGroup.Prepend>
               </InputGroup>
               
               </Col>                 

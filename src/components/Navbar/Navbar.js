@@ -4,9 +4,9 @@ import './nav.css';
 
 function Navigation() {
   return (
-    <Navbar bg="dark" variant="dark" className='navbarFonts'>
-      <Nav >
-        <Nav.Link href="/">Power Consumption Calculator</Nav.Link>
+    <Navbar bg="white" variant="light" >
+      <Nav className='nav-tabs'>
+        <Nav.Link  href="/">Power Consumption Calculator</Nav.Link>
         <Nav.Link href="solar-panel-sizing">Solar Panel Sizing</Nav.Link>
         <Nav.Link href="cable-tray-calculator">Tray Calculator</Nav.Link>
         <Nav.Link href="short-circuit-current-calculation">

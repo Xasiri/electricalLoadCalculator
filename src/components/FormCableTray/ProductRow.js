@@ -37,8 +37,8 @@ function ProductRow(props) {
             }}
           />
     </Col>
-    <Col md={3}>
-    <FormControl as="select"  onChange={handleChange} name="area">
+    <Col md={3} >
+    <FormControl as="select" onChange={handleChange} name="area">
                  {cableArea.map((area) => {
                 return <option value={area}>{area}</option>;
               })}
