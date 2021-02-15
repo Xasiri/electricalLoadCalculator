@@ -6,7 +6,7 @@ const SolarPanelSizing = () => {
   return (
     <div>
       <Card>
-        <Card.Header as="h5">Solar Panel Sizing</Card.Header>
+        <Card.Title>Solar Panel Sizing</Card.Title>
       </Card>
       <PanelMain />
     </div>

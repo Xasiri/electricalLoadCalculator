@@ -6,7 +6,7 @@ const CableTray = () => {
   return (
     <div>
       <Card>
-        <Card.Header as="h5">Tray Calculator</Card.Header>
+        <Card.Title>Tray Calculator</Card.Title>
       </Card>
       <FormTray />
     </div>

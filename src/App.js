@@ -1,15 +1,16 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import ElectricalLoad from './pages/ElectricalLoad';
-import SolarPanelSizing from './pages/SolarPanelSizing';
-import CableTray from './pages/CableTray';
-import ShortCircuitCalc from './pages/ShortCircuitCalc';
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/NavLinks";
+import ElectricalLoad from "./pages/ElectricalLoad";
+import SolarPanelSizing from "./pages/SolarPanelSizing";
+import CableTray from "./pages/CableTray";
+import ShortCircuitCalc from "./pages/ShortCircuitCalc";
+import MainNavigation from "./components/Navbar/MainNavigation";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <MainNavigation />
 
       <Switch>
         <Route
