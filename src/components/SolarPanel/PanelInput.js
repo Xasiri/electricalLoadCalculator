@@ -1,127 +1,189 @@
-import React from 'react'
-import EditableCell from './EditableCell'
-import './tdWidth.css'
+import React from "react";
+import EditableCell from "./EditableCell";
+import { Col, Row, InputGroup, FormControl } from "react-bootstrap";
+
+import "./tdWidth.css";
 
 const PanelInput = (props) => {
   return (
     <div>
-    
+      {props.consumptionData.state === undefined ? (
+        <>
+          <Row className="mb-2">
+            <Col md={8} lg="5">
+              Enter Total kWh per Month
+            </Col>
+            <Col md lg="3">
+              <EditableCell
+                cellData={{
+                  name: "KWh",
+                  value: props.panelSizing.KWh,
+                }}
+                append="kWh/month"
+              />
+            </Col>
+          </Row>
 
-    {props.consumptionData.state === undefined?   
-      <span >
-      <tr>
-        <td >Enter Total KWh per Month</td>
-        <td>: <EditableCell cellData={{
-          name: 'KWh',
-          value: props.panelSizing.KWh
-          }
-        }  
+          <Row className="mb-2">
+            <Col md={8} lg="5">
+              Enter Total Electrical Load in Watt
+            </Col>
+            <Col md={4} lg={3}>
+              <EditableCell
+                cellData={{
+                  name: "totalLoad",
+                  value: props.panelSizing.totalLoad,
+                }}
+                append="W"
+              />
+            </Col>
+          </Row>
+        </>
+      ) : (
+        <div>
+          <Row className="mb-2">
+            <Col md={8} lg="5">
+              Total KWh per Month
+            </Col>
+            <Col md={4} lg={3}>
+              <InputGroup>
+                <FormControl value={props.panelSizing.KWh} />
+
+                <InputGroup.Prepend>
+                  <InputGroup.Text>kWh/month</InputGroup.Text>
+                </InputGroup.Prepend>
+              </InputGroup>
+            </Col>
+          </Row>
+          <Row className="mb-2">
+            <Col md={8} lg="5">
+              Total Electrical Load in Watt
+            </Col>
+            <Col md={4} lg={3}>
+              <InputGroup>
+                <FormControl value={props.panelSizing.totalLoad} />
+                <InputGroup.Prepend>
+                  <InputGroup.Text>W</InputGroup.Text>
+                </InputGroup.Prepend>
+              </InputGroup>
+            </Col>
+          </Row>
+        </div>
+      )}
+
+      <Row className="mb-2">
+        <Col md={8} lg="5">
+          Future Load Expansion Factor{" "}
+        </Col>
+        <Col md={4} lg={3}>
+          <EditableCell
+            cellData={{
+              name: "inverterFutureLoadExpansionFactor",
+              value: props.panelSizing.inverterFutureLoadExpansionFactor,
+            }}
+          />{" "}
+        </Col>
+      </Row>
+      <Row className="mb-2">
+        <Col md={8} lg="5">
+          Inverter Efficiency{" "}
+        </Col>
+        <Col md={4} lg={3}>
+          <EditableCell
+            cellData={{
+              name: "inverterEfficiency",
+              value: props.panelSizing.inverterEfficiency,
+            }}
+            append="%"
+          />{" "}
+        </Col>
+      </Row>
+      <Row className="mb-2">
+        <Col md={8} lg="5">
+          Inverter Power Factor{" "}
+        </Col>
+        <Col md={4} lg={3}>
+          <EditableCell
+            cellData={{
+              name: "inverterPowerFactor",
+              value: props.panelSizing.inverterPowerFactor,
+            }}
+          />{" "}
+        </Col>
+      </Row>
+
+      <Row className="mb-2">
+        <Col md={8} lg="5">
+          Daily sunshine Hours
+        </Col>
+        <Col md={4} lg={3}>
+          <EditableCell
+            cellData={{
+              name: "hours",
+              value: props.panelSizing.hours,
+            }}
+            append="hrs"
           />
-        </td>
-       </tr>        
-       
-       <tr>
-        <td >Enter Total Electrical Load in Watt</td>
-        <td>: <EditableCell cellData={{
-          name: 'totalLoad',
-          value: props.panelSizing.totalLoad
-          }
-        }  
-          />
-        </td>
-       </tr>   
-       </span>
-    : 
-    <div>
-    <tr>
-    <td >Total KWh per Month</td>
-    <td>:  {props.panelSizing.KWh}</td>
-  </tr>
-  <tr>
-    <td>Total Electrical Load in Watt</td>
-    <td>: {props.panelSizing.totalLoad}</td>
-  </tr>
+        </Col>
+      </Row>
+      <Row className="mb-2">
+        <Col md={8} lg="5">
+          Size of Each Solar panel
+        </Col>
+        <Col md={4} lg={3}>
+          <InputGroup>
+            <InputGroup.Prepend>
+              <EditableCell
+                cellData={{
+                  name: "capacityofPanel",
+                  value: props.panelSizing.capacityofPanel,
+                }}
+                append="W"
+              />
 
-  </div>
-    }
-  
-    <tr>
-      <td>Future Load Expansion Factor </td>
-      <td>: <EditableCell cellData={{
-        name: 'inverterFutureLoadExpansionFactor',
-        value: props.panelSizing.inverterFutureLoadExpansionFactor
-        }
-      }     
-      /> </td>
-    </tr>
-    <tr>
-      <td>Inverter Efficiency </td>
-      <td>: <EditableCell cellData={{
-        name: 'inverterEfficiency',
-        value: props.panelSizing.inverterEfficiency
-        }
-      }     
-      /> </td>
-    </tr>
-    <tr>
-    <td>Inverter Power Factor </td>
-    <td>: <EditableCell cellData={{
-      name: 'inverterPowerFactor',
-      value: props.panelSizing.inverterPowerFactor
-      }
-    }     
-    /> </td>
-  </tr>
+              <EditableCell
+                cellData={{
+                  name: "voltageofPanel",
+                  value: props.panelSizing.voltageofPanel,
+                }}
+                append="V"
+              />
+            </InputGroup.Prepend>
+          </InputGroup>
+        </Col>
+      </Row>
 
-  <tr>
-    <td>Daily sunshine Hours</td>
-    <td>: <EditableCell cellData={{
-      name: 'hours',
-      value: props.panelSizing.hours
-      }
-    }     
-    /></td>
-  </tr>
-  <tr>
-        <td>Size of Each Solar panel(W, V)</td>
-        <td><label>:<EditableCell cellData={{
-          name: 'capacityofPanel',
-          value: props.panelSizing.capacityofPanel
-          }
-        }  
-        
-        />
-    </label><label> ,
-    <EditableCell  cellData={{
-      name: 'voltageofPanel',
-      value: props.panelSizing.voltageofPanel
-      }
-    }          
-        /></label></td>
-      </tr>
-
-      <tr>
-      <td>System Voltage (As per Battery Bank)</td>
-      <td>: <EditableCell cellData={{
-        name: 'systemVoltage',
-        value: props.panelSizing.systemVoltage
-        }
-      }  
-     
-  />  </td>
-    </tr>
-    <tr>
-    <td>Solar Panel Loose Wiring Connection Factor(%)</td>
-    <td>: <EditableCell cellData={{
-      name: 'solarLooseWiringConnectionFactor',
-      value: props.panelSizing.solarLooseWiringConnectionFactor
-      }
-    }  
-   
-/>  </td>
-  </tr>
+      <Row className="mb-2">
+        <Col md={8} lg="5">
+          System Voltage (As per Battery Bank)
+        </Col>{" "}
+        <Col md={4} lg={3}>
+          {" "}
+          <EditableCell
+            cellData={{
+              name: "systemVoltage",
+              value: props.panelSizing.systemVoltage,
+            }}
+            append="V"
+          />{" "}
+        </Col>
+      </Row>
+      <Row>
+        <Col md={8} lg="5">
+          Solar Panel Loose Wiring Connection Factor(%)
+        </Col>
+        <Col md={4} lg={3}>
+          <EditableCell
+            cellData={{
+              name: "solarLooseWiringConnectionFactor",
+              value: props.panelSizing.solarLooseWiringConnectionFactor,
+            }}
+            append="%"
+          />{" "}
+        </Col>
+      </Row>
     </div>
-  )
-}
+  );
+};
 
-export default PanelInput
+export default PanelInput;

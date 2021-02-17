@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import {useSelector} from 'react-redux'
 import CableDetails from './CableDetails'
+import {Container,Card} from 'react-bootstrap'
 import DetailsofElectricalSystem from './DetailsofElectricalSystem'
 import DetailsofHTandLT from './DetailsofHTandLT'
 import FaultCurrent from './FaultCurrent'
@@ -26,10 +27,12 @@ const SystemInputs = () => {
   const motorPanelId = 7;
 
   return (
-    <div>
+    <Container>
+      
     <DetailsofElectricalSystem  
       cable= {shortCircuitCable}
       id={deatailsOfElectricalSysytemId}/>
+      
     <DetailsofHTandLT
       cable= {shortCircuitCable}
       id={detailsOfHTandLTId}
@@ -63,7 +66,7 @@ const SystemInputs = () => {
       <FaultCurrent
         shortCircuitCable={shortCircuitCable}
       />
-    </div>
+    </Container>
   )
 }
 

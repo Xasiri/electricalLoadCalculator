@@ -1,15 +1,16 @@
-import React from 'react';
-import FormTray from '../components/FormCableTray/FormTray'
+import React from "react";
+import FormTray from "../components/FormCableTray/FormTray";
+import { Card } from "react-bootstrap";
 
-const CableTray=() => {
- 
+const CableTray = () => {
   return (
-
     <div>
-    <h1>Tray Calculator</h1>
-    <FormTray/>
+      <Card>
+        <Card.Title>Tray Calculator</Card.Title>
+      </Card>
+      <FormTray />
     </div>
   );
-}
+};
 
 export default CableTray;

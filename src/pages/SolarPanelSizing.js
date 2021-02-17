@@ -1,16 +1,15 @@
-import React from 'react'
-import PanelMain from '../components/SolarPanel/PanelMain'
+import React from "react";
+import { Card } from "react-bootstrap";
+import PanelMain from "../components/SolarPanel/PanelMain";
 
-const SolarPanelSizing =() =>{
-
-  return(
+const SolarPanelSizing = () => {
+  return (
     <div>
-    <h1>Solar Panel Sizing</h1>
-    <PanelMain/>
+      <Card>
+        <Card.Title>Solar Panel Sizing</Card.Title>
+      </Card>
+      <PanelMain />
     </div>
-  )
-  }
+  );
+};
 export default SolarPanelSizing;
-
- 
-  

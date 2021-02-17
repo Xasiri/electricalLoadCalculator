@@ -35,4 +35,4 @@ export const guageData=[
 ]
 
 export const cableArea=['1.5','2.5','4','6','10','16','25','35','50','70','95','120','150','185','240','300']
-export const coreCount=['3','4']
+export const coreCount=['1','2','3','4']
