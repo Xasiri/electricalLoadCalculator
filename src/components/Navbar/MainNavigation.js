@@ -39,20 +39,23 @@ const MainNavigation = () => {
       />
 
       <Navbar.Collapse class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <Nav>
-          <Link to="/short-circuit-current-calculation">
-            <Nav.Link href="#short-circuit-current-calculation">
-              Short Circuit Current Calculation
+        <Nav defaultActiveKey="power">
+          <Link to="/">
+            <Nav.Link eventKey="power" href="/">
+              Power Consumption Calculator
             </Nav.Link>
-          </Link>
-          <Link to="/cable-tray-calculator">
-            <Nav.Link href="#cable-tray-calculator">Tray Calculator</Nav.Link>
           </Link>
           <Link to="/solar-panel-sizing">
             <Nav.Link href="#solar-panel-sizing">Solar Panel Sizing</Nav.Link>
           </Link>
-          <Link to="/">
-            <Nav.Link href="/">Power Consumption Calculator</Nav.Link>
+          <Link to="/cable-tray-calculator">
+            <Nav.Link href="#cable-tray-calculator">Tray Calculator</Nav.Link>
+          </Link>
+
+          <Link to="/short-circuit-current-calculation">
+            <Nav.Link href="#short-circuit-current-calculation">
+              Short Circuit Current Calculation
+            </Nav.Link>
           </Link>
         </Nav>
       </Navbar.Collapse>

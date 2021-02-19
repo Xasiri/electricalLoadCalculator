@@ -20,9 +20,15 @@ function App() {
           <Route
             path="/short-circuit-current-calculation"
             component={ShortCircuitCalc}
-          />
-          <Route path="/solar-panel-sizing" component={SolarPanelSizing} />
-          <Route path="/cable-tray-calculator" component={CableTray} />
+          >
+            <ShortCircuitCalc />
+          </Route>
+          <Route path="/solar-panel-sizing" component={SolarPanelSizing}>
+            <SolarPanelSizing />
+          </Route>
+          <Route path="/cable-tray-calculator" component={CableTray}>
+            <CableTray />
+          </Route>
           <Route path="/" component={ElectricalLoad}>
             <ElectricalLoad />
           </Route>

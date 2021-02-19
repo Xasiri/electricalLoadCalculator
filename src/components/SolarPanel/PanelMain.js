@@ -65,14 +65,14 @@ const PanelMain = () => {
   );
 
   return (
-    <Container>
-      <Card>
+    <>
+      <>
         <PanelInput
           panelSizing={panelSizing}
           consumptionData={consumptionData}
         />
-      </Card>
-      <Card>
+      </>
+      <>
         <Row>
           {" "}
           <Col>Total size of panel(W)</Col>
@@ -100,8 +100,8 @@ const PanelMain = () => {
             </Col>
           }
         </Row>
-      </Card>
-    </Container>
+      </>
+    </>
   );
 };
 

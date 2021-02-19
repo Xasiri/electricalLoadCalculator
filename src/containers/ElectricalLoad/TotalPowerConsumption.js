@@ -7,7 +7,7 @@ import {
 } from "./calculation/ElectricalLoad/LoadCalculation";
 import { useSelector } from "react-redux";
 import "./powerConsumtion.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 const TotalPowerConsumption = () => {
   const table = useSelector((state) => state.table);

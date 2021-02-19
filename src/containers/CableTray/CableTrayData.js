@@ -41,8 +41,8 @@ const CableTrayData = ({ products }) => {
   let cableCalculatedData = cableCalculationHandler(cableDataArray);
 
   return (
-    <Container>
-      <Card>
+    <>
+      <>
         <Row className="mb-2">
           <Col md lg="6" md={7} lg="6">
             Size of Cable Tray(mm)
@@ -148,7 +148,7 @@ const CableTrayData = ({ products }) => {
             </Button>
           </Col>
         </Row>
-      </Card>
+      </>
       {isDataAvailable && (
         <Card>
           <TrayValidation
@@ -157,7 +157,7 @@ const CableTrayData = ({ products }) => {
           />
         </Card>
       )}
-    </Container>
+    </>
   );
 };
 export default CableTrayData;

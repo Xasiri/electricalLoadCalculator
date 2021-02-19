@@ -4,7 +4,7 @@ import InputCell from "./InputCell";
 
 const DetailsofElectricalSystem = (props) => {
   return (
-    <Card>
+    <>
       <Card.Body>
         <Row className="mb-2">
           <Card.Title>Details of Electrical System SLD</Card.Title>
@@ -64,7 +64,7 @@ const DetailsofElectricalSystem = (props) => {
           </Col>{" "}
         </Row>
       </Card.Body>
-    </Card>
+    </>
   );
 };
 

@@ -1,13 +1,13 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import PanelMain from "../components/SolarPanel/PanelMain";
 import styles from "../mainStyles/body.module.css";
 
 const SolarPanelSizing = () => {
   return (
-    <div className={styles.pageTop}>
+    <Container className={styles.pageTop}>
       <PanelMain />
-    </div>
+    </Container>
   );
 };
 export default SolarPanelSizing;

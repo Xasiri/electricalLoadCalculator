@@ -15,42 +15,40 @@ function ProductTable(props) {
     return <ProductRow product={product} key={product.id} />;
   });
   return (
-    <Container>
-      <Card>
-        <Card.Title>
-          <Row className="py-2">
-            <Col lg={3} md={3}>
-              Quantity
-            </Col>
-            <Col md={3}>Area(mm²)</Col>
-            <Col md={3}>Core Count</Col>
-          </Row>
-        </Card.Title>
-
-        {product}
-        <Row className="rowMarginSet">
-          <Button
-            variant="outline-danger"
-            className="buttonadd"
-            type="button"
-            onClick={() =>
-              dispatch({
-                type: "ADD_CABLE",
-                obj: {
-                  id: (
-                    +new Date() + Math.floor(Math.random() * 999999)
-                  ).toString(36),
-                  area: "1.5",
-                  core: "3",
-                },
-              })
-            }
-          >
-            Add Cable
-          </Button>
+    <>
+      <Card.Title>
+        <Row className="py-2">
+          <Col lg={3} md={3}>
+            Quantity
+          </Col>
+          <Col md={3}>Area(mm²)</Col>
+          <Col md={3}>Core Count</Col>
         </Row>
-      </Card>
-    </Container>
+      </Card.Title>
+
+      {product}
+      <Row className="rowMarginSet">
+        <Button
+          variant="outline-danger"
+          className="buttonadd"
+          type="button"
+          onClick={() =>
+            dispatch({
+              type: "ADD_CABLE",
+              obj: {
+                id: (+new Date() + Math.floor(Math.random() * 999999)).toString(
+                  36
+                ),
+                area: "1.5",
+                core: "3",
+              },
+            })
+          }
+        >
+          Add Cable
+        </Button>
+      </Row>
+    </>
   );
 }
 

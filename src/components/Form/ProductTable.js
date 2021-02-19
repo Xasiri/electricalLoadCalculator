@@ -17,7 +17,7 @@ function ProductTable(props) {
 
   return (
     <>
-      <Card className={styles.card}>
+      <>
         <Row className="py-2">
           <Col lg={3} md={3}>
             Appliance
@@ -61,7 +61,7 @@ function ProductTable(props) {
             </Button>{" "}
           </Col>
         </Row>
-      </Card>
+      </>
     </>
   );
 }
