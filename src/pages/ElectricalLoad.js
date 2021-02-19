@@ -1,19 +1,16 @@
 import React from "react";
 import Form from "../components/Form/Form";
 import TotalPowerConsumption from "../containers/ElectricalLoad/TotalPowerConsumption";
-import { Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import "../App.css";
 import "./panel.css";
-
+import styles from "../mainStyles/body.module.css";
 const ElectricalLoad = () => {
   return (
-    <div>
-      <Card>
-        <Card.Title>Power Consumption Calculator</Card.Title>
-      </Card>
+    <Container className="mainContainer">
       <Form />
-
       <TotalPowerConsumption />
-    </div>
+    </Container>
   );
 };
 export default ElectricalLoad;

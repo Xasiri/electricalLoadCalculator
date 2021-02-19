@@ -1,0 +1,14 @@
+.logo {
+  max-height: 50px;
+  margin-right: 3rem;
+}
+.navbar {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.54) !important;
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.54) !important;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.54) !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  transition: all 0.2s ease-in-out;
+  background-color: #8ea2bd;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png") !important;
+}

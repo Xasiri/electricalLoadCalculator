@@ -9,7 +9,7 @@ function EditableCell(props) {
   const { height, width } = useWindowDimensions();
   let outputWindow = (
     <FormControl
-      type="text"
+      style={{ height: "32px" }}
       id={props.cellData.id}
       value={props.cellData.value}
       name={props.cellData.type}
@@ -53,7 +53,6 @@ function EditableCell(props) {
       </InputGroup>
     );
   }
-  console.log("height,width", height, width);
 
   return outputWindow;
 }

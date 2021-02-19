@@ -27,6 +27,14 @@
 .App-link {
   color: #61dafb;
 }
+.homepage-bgimage {
+  background: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  background-color: #8ea2bd;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 @keyframes App-logo-spin {
   from {

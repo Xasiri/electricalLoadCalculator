@@ -1,10 +1,10 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Yanone Kaffeesatz", "Noto Sans TC", "GothamBold" sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
+  background-repeat: repeat !important;
+  background-position: left top !important;
+  font-family: "Raleway", sans-serif !important;
+  background-color: #8ea2bd;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
 code {

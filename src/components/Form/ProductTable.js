@@ -16,7 +16,7 @@ function ProductTable(props) {
   });
 
   return (
-    <Container className={styles.ContainerHeader}>
+    <>
       <Card className={styles.card}>
         <Row className="py-2">
           <Col lg={3} md={3}>
@@ -62,7 +62,7 @@ function ProductTable(props) {
           </Col>
         </Row>
       </Card>
-    </Container>
+    </>
   );
 }
 

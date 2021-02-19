@@ -67,10 +67,10 @@ input[list] {
 }
 /* 
 */
-.formControl {
-  height: 2rem !important;
+/* .formControl {
+  height: 1.5rem !important;
   width: 80% !important;
-}
+} */
 /* .qtyColumn1{
   margin-top: 1%;
 } */
