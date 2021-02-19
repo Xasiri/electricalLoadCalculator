@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Nav, Navbar, Container, Button, Collapse } from "react-bootstrap";
-// import NavLinks from "./NavLinks";
-// import SideDrawer from "./SideDrawer";
-// import MainHeader from "./MainHeader";
-// import styles from "./MainNavigation.module.css";
-// import navStyles from "../../mainStyles/navStyles.module.css";
-// import Backdrop from "../UIElements/Backdrop";
-// import { FaBars } from "react-icons/fa";
 import "./navi.css";
 const MainNavigation = () => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
@@ -19,13 +12,7 @@ const MainNavigation = () => {
     setDrawerIsOpen(false);
   };
   return (
-    <Navbar
-      collapseOnSelect
-      expand="lg"
-      bg="transparent"
-      fixed="top"
-      variant="dark"
-    >
+    <Navbar collapseOnSelect expand="lg" fixed="top" variant="dark">
       <Navbar.Brand href="/">
         <img
           src="https://eml-eis.com/wp-content/uploads/2020/09/logo-1.png"
@@ -38,7 +25,10 @@ const MainNavigation = () => {
         className="navbar-toggler"
       />
 
-      <Navbar.Collapse class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <Navbar.Collapse
+        className="collapse navbar-collapse"
+        id="navbarNavAltMarkup"
+      >
         <Nav defaultActiveKey="power">
           <Link to="/">
             <Nav.Link eventKey="power" href="/">
