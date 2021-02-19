@@ -9,7 +9,7 @@ const PanelInput = (props) => {
     <div>
       {props.consumptionData.state === undefined ? (
         <>
-          <Row className="mb-2">
+          <Row className="mb-2 pt-2">
             <Col md={8} lg="5">
               Enter Total kWh per Month
             </Col>

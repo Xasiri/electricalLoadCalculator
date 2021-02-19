@@ -16,7 +16,7 @@ function ProductTable(props) {
   });
   return (
     <>
-      <Card.Title>
+      <>
         <Row className="py-2">
           <Col lg={3} md={3}>
             Quantity
@@ -24,7 +24,7 @@ function ProductTable(props) {
           <Col md={3}>Area(mm²)</Col>
           <Col md={3}>Core Count</Col>
         </Row>
-      </Card.Title>
+      </>
 
       {product}
       <Row className="rowMarginSet">

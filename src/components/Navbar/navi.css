@@ -38,9 +38,18 @@
 .active {
   background-color: #ff0000;
 }
+.solarPanelSpace {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
 @media only screen and (max-width: 990px) {
+  .solarPanelSpace {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
   .navbar-nav {
-    background-color: #000;
+    background-color: #8ea2bd;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
     padding: 20px;
   }
   .navbar-dark .navbar-toggler {
@@ -58,6 +67,6 @@
   .navbar-dark .navbar-nav .nav-link.active,
   .navbar-dark .navbar-nav .nav-link.show,
   .navbar-dark .navbar-nav .show > .nav-link {
-    background-color: transparent;
+    background-color: #ff0000;
   }
 }

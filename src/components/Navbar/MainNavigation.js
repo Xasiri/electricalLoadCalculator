@@ -36,10 +36,14 @@ const MainNavigation = () => {
             </Nav.Link>
           </Link>
           <Link to="/solar-panel-sizing">
-            <Nav.Link href="#solar-panel-sizing">Solar Panel Sizing</Nav.Link>
+            <Nav.Link className="solarPanelSpace" href="#solar-panel-sizing">
+              Solar Panel Sizing
+            </Nav.Link>
           </Link>
           <Link to="/cable-tray-calculator">
-            <Nav.Link href="#cable-tray-calculator">Tray Calculator</Nav.Link>
+            <Nav.Link className="solarPanelSpace" href="#cable-tray-calculator">
+              Tray Calculator
+            </Nav.Link>
           </Link>
 
           <Link to="/short-circuit-current-calculation">
