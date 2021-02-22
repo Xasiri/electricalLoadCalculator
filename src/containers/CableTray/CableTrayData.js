@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import TrayValidation from "./TrayValidation";
 import { cableCalculationHandler } from "../../containers/CableTray/calculation/TrayCalculation";
 import {
-  Button,
-  Container,
+  
   Col,
   Row,
   InputGroup,
   FormControl,
-  Card,
+  
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./paragraph.css";

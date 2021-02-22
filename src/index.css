@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 body {
   background-size: cover;
   background-repeat: repeat !important;
   background-position: left top !important;
-  font-family: "Raleway", sans-serif !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
   background-color: #8ea2bd;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }

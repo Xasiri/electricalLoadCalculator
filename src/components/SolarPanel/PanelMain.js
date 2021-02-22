@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Container, Col, Row, Card } from "react-bootstrap";
+import { Col, Row} from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import PanelInput from "./PanelInput";
 import {

@@ -1,16 +1,9 @@
-import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
-import { Nav, Navbar, Container, Button, Collapse } from "react-bootstrap";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Nav, Navbar} from "react-bootstrap";
 import "./navi.css";
 const MainNavigation = () => {
-  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  const openDrawer = () => setDrawerIsOpen(!drawerIsOpen);
-
-  const closeDrawer = () => {
-    setDrawerIsOpen(false);
-  };
+ 
   return (
     <Navbar collapseOnSelect expand="lg" fixed="top" variant="dark">
       <Navbar.Brand href="/">

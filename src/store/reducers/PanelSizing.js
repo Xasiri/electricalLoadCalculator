@@ -34,10 +34,10 @@ function PanelSizing(state = initialState, action) {
             draftState.voltageofPanel = action.obj.value;
 
             break;
-          case 'voltageofPanel':
-            draftState.voltageofPanel = action.obj.value;
+          // case 'voltageofPanel':
+          //   draftState.voltageofPanel = action.obj.value;
 
-            break;
+          //   break;
           case 'capacityofPanel':
             draftState.capacityofPanel = action.obj.value;
 

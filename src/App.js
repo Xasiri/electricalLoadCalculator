@@ -5,7 +5,7 @@ import SolarPanelSizing from "./pages/SolarPanelSizing";
 import CableTray from "./pages/CableTray";
 import ShortCircuitCalc from "./pages/ShortCircuitCalc";
 import MainNavigation from "./components/Navbar/MainNavigation";
-import bodyStyles from "./mainStyles/body.module.css";
+// import bodyStyles from "./mainStyles/body.module.css";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 import "./index.css";

@@ -52,7 +52,6 @@ function shortCircuitCables(state =dummyState, action) {
       
     default:
       return state;
-      break;
     }
 }
   

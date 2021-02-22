@@ -6,7 +6,7 @@ import useWindowDimensions from "../../customHooks/getWindow";
 
 function EditableCell(props) {
   const dispatch = useDispatch();
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   let outputWindow = (
     <FormControl
       style={{ height: "32px" }}

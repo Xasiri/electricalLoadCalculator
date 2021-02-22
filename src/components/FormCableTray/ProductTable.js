@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import ProductRow from "./ProductRow";
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Row, Col} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Table.css";
 import "../../containers/CableTray/paragraph.css"

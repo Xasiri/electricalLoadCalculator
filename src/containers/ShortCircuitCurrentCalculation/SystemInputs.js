@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import CableDetails from "./CableDetails";
-import { Container, Card } from "react-bootstrap";
+// import { Container, Card } from "react-bootstrap";
 import DetailsofElectricalSystem from "./DetailsofElectricalSystem";
 import DetailsofHTandLT from "./DetailsofHTandLT";
 import FaultCurrent from "./FaultCurrent";

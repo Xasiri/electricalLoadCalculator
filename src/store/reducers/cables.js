@@ -12,7 +12,7 @@ function cables(state = initialState, action) {
       return state.concat([action.obj]);
     }
     case "DELETE_CABLE": {
-      let index = state.findIndex((p) => p.id === action.id);
+      // let index = state.findIndex((p) => p.id === action.id);
 
       return [...state.filter((p) => p.id !== action.id)];
     }

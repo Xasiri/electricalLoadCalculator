@@ -27,16 +27,17 @@ function ProductRow(props) {
     });
   }, []);
 
-  const items = useMemo(
-    () =>
-      applianceData.map((oneItem) => ({
-        // required: what to show to the user
-        label: oneItem.name,
-        // required: key to identify the item within the array
-        id: oneItem.id,
-      })),
-    []
-  );
+  // const items = useMemo(
+  //   () =>
+  //     applianceData.map((oneItem) => ({
+  //       // required: what to show to the user
+  //       label: oneItem.name,
+  //       // required: key to identify the item within the array
+  //       id: oneItem.id,
+  //       key: oneItem.id
+  //     })),
+  //   []
+  // );
 
   return (
     <Row className="mb-1">
