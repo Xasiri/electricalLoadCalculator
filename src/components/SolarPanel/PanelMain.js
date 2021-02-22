@@ -10,6 +10,7 @@ import {
   panelinEachStringCalculation,
   totalNoofPanel,
 } from "../../containers/ElectricalLoad/calculation/SolarPanel/PanelSizingCalculation";
+import './tdWidth.css'
 
 const PanelMain = () => {
   // const filter = useSelector(state => state.filter)
@@ -72,35 +73,35 @@ const PanelMain = () => {
           consumptionData={consumptionData}
         />
       </>
-      <>
-        <Row>
+      <div className="solarPanelSizingResults">
+        <Row className="py-2 font-weight-bold">
           {" "}
-          <Col>Total size of panel(W)</Col>
+          <Col xs="7" md={8} lg="6">Total size of panel(W)</Col>
           <Col>: {sizeofPanel}</Col>
         </Row>
 
-        <Row>
-          <Col>No of String of Solar Panel </Col>
+        <Row className="py-2 font-weight-bold">
+          <Col  xs="7"  md={8} lg="6">No of Panels in Each String </Col>
           {<Col>: {noofPanelinEachString} No’s</Col>}
         </Row>
-        <Row>
-          <Col>No of String of Solar Panel </Col>
+        <Row className="py-2 font-weight-bold">
+          <Col xs="7"  md={8} lg="6">No of String of Solar Panel </Col>
           {<Col>: {numberofStringofPanel} No’s</Col>}
         </Row>
-        <Row>
+        <Row className="py-2 font-weight-bold">
           {" "}
-          <Col>Total No of Solar Panel </Col>
+          <Col xs="7"  md={8} lg="6">Total No of Solar Panel </Col>
           {<Col>: {totalNoofSolarPanels} No’s</Col>}
         </Row>
-        <Row>
-          <Col>Size of Inverter </Col>
+        <Row className="py-2 font-weight-bold">
+          <Col xs="7"  md={8} lg="6">Size of Inverter </Col>
           {
             <Col>
               : {sizeofInverter.watt} watt or {sizeofInverter.VA} VA
             </Col>
           }
         </Row>
-      </>
+      </div>
     </>
   );
 };

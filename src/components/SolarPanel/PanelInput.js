@@ -9,8 +9,8 @@ const PanelInput = (props) => {
     <div>
       {props.consumptionData.state === undefined ? (
         <>
-          <Row className="mb-2 pt-2">
-            <Col md={8} lg="5">
+          <Row className="mb-2">
+            <Col md={8} lg="6">
               Enter Total kWh per Month
             </Col>
             <Col md lg="3">
@@ -25,7 +25,7 @@ const PanelInput = (props) => {
           </Row>
 
           <Row className="mb-2">
-            <Col md={8} lg="5">
+            <Col md={8} lg="6">
               Enter Total Electrical Load in Watt
             </Col>
             <Col md={4} lg={3}>
@@ -42,7 +42,7 @@ const PanelInput = (props) => {
       ) : (
         <div>
           <Row className="mb-2">
-            <Col md={8} lg="5">
+            <Col md={8} lg="6">
               Total KWh per Month
             </Col>
             <Col md={4} lg={3}>
@@ -56,7 +56,7 @@ const PanelInput = (props) => {
             </Col>
           </Row>
           <Row className="mb-2">
-            <Col md={8} lg="5">
+            <Col md={8} lg="6">
               Total Electrical Load in Watt
             </Col>
             <Col md={4} lg={3}>
@@ -72,7 +72,7 @@ const PanelInput = (props) => {
       )}
 
       <Row className="mb-2">
-        <Col md={8} lg="5">
+        <Col md={8} lg="6">
           Future Load Expansion Factor{" "}
         </Col>
         <Col md={4} lg={3}>
@@ -85,7 +85,7 @@ const PanelInput = (props) => {
         </Col>
       </Row>
       <Row className="mb-2">
-        <Col md={8} lg="5">
+        <Col md={8} lg="6">
           Inverter Efficiency{" "}
         </Col>
         <Col md={4} lg={3}>
@@ -99,7 +99,7 @@ const PanelInput = (props) => {
         </Col>
       </Row>
       <Row className="mb-2">
-        <Col md={8} lg="5">
+        <Col md={8} lg="6">
           Inverter Power Factor{" "}
         </Col>
         <Col md={4} lg={3}>
@@ -113,7 +113,7 @@ const PanelInput = (props) => {
       </Row>
 
       <Row className="mb-2">
-        <Col md={8} lg="5">
+        <Col md={8} lg="6">
           Daily sunshine Hours
         </Col>
         <Col md={4} lg={3}>
@@ -127,7 +127,7 @@ const PanelInput = (props) => {
         </Col>
       </Row>
       <Row className="mb-2">
-        <Col md={8} lg="5">
+        <Col md={8} lg="6">
           Size of Each Solar panel
         </Col>
         <Col md={4} lg={3}>
@@ -154,7 +154,7 @@ const PanelInput = (props) => {
       </Row>
 
       <Row className="mb-2">
-        <Col md={8} lg="5">
+        <Col md={8} lg="6">
           System Voltage (As per Battery Bank)
         </Col>{" "}
         <Col md={4} lg={3}>
@@ -169,7 +169,7 @@ const PanelInput = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col md={8} lg="5">
+        <Col md={8} lg="6">
           Solar Panel Loose Wiring Connection Factor(%)
         </Col>
         <Col md={4} lg={3}>

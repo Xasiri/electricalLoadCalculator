@@ -8,7 +8,7 @@ const CableDetails = (props) => {
     <>
       <Card.Body>
         <Row className="mb-2">
-          <Card.Title>{props.stage}</Card.Title>
+          <Card.Subtitle className="font-weight-bold">{props.stage}</Card.Subtitle>
         </Row>
         <Row className="mb-2">
           <Col md={8} lg="7">

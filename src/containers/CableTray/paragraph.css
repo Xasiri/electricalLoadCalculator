@@ -14,3 +14,16 @@
 .cableTrayData__row{ 
   display: flex;
 }
+.validateButton{
+  width: 100% !important;
+  background-color: white; 
+  color: #057AFC; 
+  border: 1px solid #057AFC;
+  font-size: 14px;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+.validateButton:hover {
+  background-color: #057AFC;
+  color: white;
+}

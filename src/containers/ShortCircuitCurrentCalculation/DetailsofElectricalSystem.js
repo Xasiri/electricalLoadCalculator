@@ -7,9 +7,9 @@ const DetailsofElectricalSystem = (props) => {
     <>
       <Card.Body>
         <Row className="mb-2">
-          <Card.Title>Details of Electrical System SLD</Card.Title>
+          <Card.Subtitle className="font-weight-bold">Details of Electrical System SLD</Card.Subtitle>
         </Row>
-        <Row className="mb-2">
+        <Row className="mb-2"> 
           <Col md={8} lg="7">
             Main Incoming HT Supply Voltage{" "}
           </Col>

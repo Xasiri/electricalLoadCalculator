@@ -19,33 +19,25 @@ const TotalPowerConsumption = () => {
   return (
     <>
       <Row className="firstRow">
-        <Col className="Colabove1" xs={{ span: 3, offset: 5 }}>
+      <Col xs={{ span: 3, offset: 2 }}>
+         
+         </Col>
+        <Col className="boxHeader"  xs={{ span: 3, offset: 3 }}>
           {" "}
           Total Watts-(Peak Load)
         </Col>
-        <Col className="Colabove2" xs={{ span: 3, offset: 2 }}>
+        <Col className="boxHeader" xs={{ span: 3, offset: 3 }}>
           Total Watt Hours per Day
         </Col>
       </Row>
       <Row className="secondRow">
         <Col xs={{ span: 3, offset: 2 }}>
-          <Link
-            className="powerConsumption__Link"
-            to={{
-              pathname: "/solar-panel-sizing",
-              state: {
-                totalWattsHoursPerDay: totalWattsHoursPerDay,
-                totalWatts: totalWatts,
-              },
-            }}
-          >
-            <span>Solar Panel Sizing</span>
-          </Link>
+         
         </Col>
         <Col className="box" xs={{ span: 3, offset: 3 }}>
           {totalWatts.toLocaleString()}
         </Col>
-        <Col className="box_next" xs={{ span: 3, offset: 3 }}>
+        <Col className="box_next " xs={{ span: 3, offset: 3 }}>
           {totalWattsHoursPerDay.toLocaleString()}
         </Col>
       </Row>
@@ -55,6 +47,21 @@ const TotalPowerConsumption = () => {
         </Col>
         <Col className="box_second_row2" xs={{ span: 3, offset: 3 }}>
           {totalKWh}
+        </Col>
+      </Row>
+      <Row>
+        <Col className="sizingResults" xs={{ span: 3, offset: 8 }}>
+        <Link
+              to={{
+              pathname: "/solar-panel-sizing",
+              state: {
+                totalWattsHoursPerDay: totalWattsHoursPerDay,
+                totalWatts: totalWatts,
+              },
+            }}
+          >
+            <span>Solar Panel Sizing</span>
+          </Link>
         </Col>
       </Row>
     </>

@@ -28,7 +28,7 @@ function ProductRow(props) {
 
   return (
     <Row className="mb-2">
-      <Col md={3}>
+      <Col lg="3" md={3}>
         <EditableCell
           cellData={{
             type: "quantity",
@@ -57,7 +57,7 @@ function ProductRow(props) {
       </Col>
       <Col md={3}>
         <button className="delete" onClick={deleteHandler}>
-          <AiOutlineCloseCircle size="1.5em" color="orange" />
+          <AiOutlineCloseCircle size="1.5em" color="red" />
         </button>
       </Col>
     </Row>

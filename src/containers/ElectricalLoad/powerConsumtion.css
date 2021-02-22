@@ -49,10 +49,10 @@
   padding: 13px;
   border-radius: 4px;
 }
-.powerConsumption__Link {
+/* .powerConsumption__Link {
   text-decoration: none;
   color: #e05a2d;
-}
+} */
 
 .powerConsumption__panellink {
   position: absolute;
@@ -73,7 +73,20 @@
   font-size: 18px;
   font-weight: 800;
 }
+.boxHeader {
+  width: 180px;
+  margin-left: 0% !important;
+  text-align: center;
+}
+.sizingResults{
+  /* width: 180px; */
+  /* margin-left: 0% !important; */
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  /* color: #e05a2d; */
 
+}
 .box {
   border: 1px solid black;
   padding: 13px;
@@ -87,7 +100,8 @@
 }
 .box_next {
   border: 1px solid black;
-  padding: 13px;
+  padding: 13px; 
+  padding-right: 15px;
   height: 50px;
   width: 180px;
   background-color: #f7f7f7;
@@ -108,7 +122,7 @@
 }
 .box_second_row2 {
   font-size: 18px;
-  color: #e05a2d;
+  /* color: #e05a2d; */
   width: 180px;
   height: 50px;
   border: 1px solid black;

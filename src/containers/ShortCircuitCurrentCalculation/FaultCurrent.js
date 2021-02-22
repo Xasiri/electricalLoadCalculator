@@ -7,7 +7,8 @@ import {faultCurrentAtHTBreaker,
         faultLevelAtSubPanel,
         faultCurrentMotorControl
       } from './calculation/ShortCircuitCalculation'
-
+      import {Card ,Container} from "react-bootstrap";
+import './card.css'
 import CurrentValue from './CurrentValue';
 
 const FaultCurrent = (props) => {
@@ -66,8 +67,8 @@ const FaultCurrent = (props) => {
   let faultCurrentAtMotorControl = faultCurrentMotorControl(system,motorPanelCabelImpedence,totalImpedenceUptoSubPanel)
   console.log('FaultCurrent',faultCurrentAtHTBreak,faultCurrentAtHTBToPrimary,faultCurrentATSecondaryWinding,faultCurrentAtMainLtPanel,faultCurrentAtSubPanel,faultCurrentAtMotorControl)
   return (
-    <div>
-      <h4>Summary of Calculation</h4>    
+    <Container>
+      <Card.Title className="font-weight-bold">Summary of Calculation</Card.Title>    
       
       
       <CurrentValue  
@@ -81,7 +82,7 @@ const FaultCurrent = (props) => {
         />
       
       
-    </div>
+    </Container>
   )
 }
 

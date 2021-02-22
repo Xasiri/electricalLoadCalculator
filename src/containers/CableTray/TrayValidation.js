@@ -44,7 +44,7 @@ const TrayValidation = ({ trayData, cableCalculatedData }) => {
   let faultySelection = <span style={redStyle}>Faulty Selection</span>;
   return (
     <>
-      <Row>
+      <Row className="mt-4">
         <Col xs="10" lg="7">
           Calculated Cable Tray width : ({cableCalculatedData.cableWidth}mm)
           {checkTrayData(cableCalculatedData.cableWidth, trayData.width)
@@ -53,14 +53,14 @@ const TrayValidation = ({ trayData, cableCalculatedData }) => {
           Actual Cable Tray width ({trayData.width}mm){" "}
         </Col>
         <Col lg="4" xs="10">
-          ={" "}
+        
           {checkTrayData(cableCalculatedData.cableWidth, trayData.width)
             ? ok
             : faultySelection}
         </Col>
       </Row>
 
-      <Row>
+      <Row className="my-2">
         <Col>
           Calculated depth of Cable Tray ({CalculatedDepthofCableTray}mm)
           {checkTrayData(CalculatedDepthofCableTray, trayData.height)
@@ -69,37 +69,35 @@ const TrayValidation = ({ trayData, cableCalculatedData }) => {
           Actual Depth of Cable Tray ({trayData.height}mm)
         </Col>
         <Col lg="5">
-          {" "}
-          ={" "}
+          
           {checkTrayData(CalculatedDepthofCableTray, trayData.height)
             ? ok
             : faultySelection}
         </Col>
       </Row>
 
-      <Row>
+      <Row className="my-2">
         <Col>
           Calculated Weight of all Cables ({actualWeightofCables}Kg/m)
           {actualWeightofCables > trayData.weight ? " > " : " < "} Actual Weight
           of Cable Tray ({trayData.weight} Kg/m)
         </Col>
         <Col lg="5">
-          {" "}
-          ={actualWeightofCables < trayData.weight ? ok : faultySelection}
+          {actualWeightofCables < trayData.weight ? ok : faultySelection}
         </Col>
       </Row>
 
-      <Row>
+      <Row className="my-2">
         <Col>Remaining Cable Tray width Area </Col>
-        <Col lg="5">= {remainingCableTrayWidth}%</Col>
+        <Col lg="5"> {remainingCableTrayWidth}%</Col>
       </Row>
 
-      <Row>
+      <Row className="my-2">
         <Col>Remaining Cable Tray Area</Col>
-        <Col lg="5"> = {remainingCableTrayArea}%</Col>
+        <Col lg="5"> {remainingCableTrayArea}%</Col>
       </Row>
 
-      <Row>
+      <Row className="my-2">
         <Col>
           Selection of {trayData.width}X{trayData.height} Cable Tray is :
         </Col>

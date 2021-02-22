@@ -104,7 +104,7 @@ function ProductRow(props) {
       </Col>
       <Col md={0.5} className="mt-1">
         <button className={styles.deleteButton} onClick={deleteHandler}>
-          <AiOutlineCloseCircle size="1.5em" color="orange" />
+          <AiOutlineCloseCircle size="1.5em" color="red" />
         </button>
       </Col>
     </Row>

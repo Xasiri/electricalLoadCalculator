@@ -13,16 +13,24 @@
   transform: scale(0);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.5);
 } */
-
+ 
 .inputGroupWidth {
   width: 60px;
+  font-size: 12px;
 }
 .inputGroupWidth_CableTray {
   width: 70px;
+  font-size: 12px;
+
 }
 .inputGroupWidth_SolarPanelRest {
   width: 45px;
+  font-size: 12px;
+
 }
 .inputGroupWidth_SolarPanelKwhmonth {
-  width: 100px;
+  width: 110px;
+  font-size: 12px;
+
 }
+ 

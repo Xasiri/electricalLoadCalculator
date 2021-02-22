@@ -1,6 +1,10 @@
 .addAppliance {
   margin-top: 3%;
-  width: 130px !important;
+  font-weight: bold
+  /* width: 130px !important; */
+}
+.columnHeader{
+  font-weight: bold
 }
 
 @media (min-width: 350px) {

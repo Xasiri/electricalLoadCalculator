@@ -11,10 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-@font-face {
+/* @font-face {
   font-family: "GothamBold";
   src: local("GothamBold"), url(./GothamBold.ttf) format("ttf");
-}
+} */
 
 .slide-in-left-enter {
   transform: translateX(-100%);

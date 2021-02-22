@@ -10,6 +10,9 @@
   margin-top: 8rem;
   margin-bottom: 200px;
   background-color: white;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .homepagebgimage {
   /* background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"); */
@@ -21,3 +24,4 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+ 

@@ -8,7 +8,6 @@ function EditableCell(props) {
 
   return (
     <FormControl
-      className="quantityWidth"
       placeholder="Quantity"
       aria-label="Amount (to the nearest dollar)"
       type="text"

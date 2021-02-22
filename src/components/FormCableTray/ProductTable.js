@@ -4,6 +4,7 @@ import ProductRow from "./ProductRow";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Table.css";
+import "../../containers/CableTray/paragraph.css"
 
 function ProductTable(props) {
   const dispatch = useDispatch();
@@ -17,8 +18,8 @@ function ProductTable(props) {
   return (
     <>
       <>
-        <Row className="py-2">
-          <Col lg={3} md={3}>
+        <Row className="font-weight-bold">
+          <Col  lg={3} md={3}>
             Quantity
           </Col>
           <Col md={3}>Area(mm²)</Col>
@@ -27,10 +28,10 @@ function ProductTable(props) {
       </>
 
       {product}
-      <Row className="rowMarginSet">
-        <Button
-          variant="outline-danger"
-          className="buttonadd"
+      <Row>
+        <Col lg="3" md="3" className="my-2">
+        <button 
+          className="validateButton"
           type="button"
           onClick={() =>
             dispatch({
@@ -45,8 +46,9 @@ function ProductTable(props) {
             })
           }
         >
-          Add Cable
-        </Button>
+          ADD CABLE
+        </button>
+        </Col>
       </Row>
     </>
   );

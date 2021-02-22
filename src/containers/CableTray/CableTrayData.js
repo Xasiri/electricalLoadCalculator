@@ -142,20 +142,20 @@ const CableTrayData = ({ products }) => {
           <Col> Check for Validation</Col>
         </Row>
         <Row>
-          <Col>
-            <Button onClick={() => validationStateHandler()}>
-              Check for validation
-            </Button>
+          <Col lg={3} md={3}>
+            <button type="button" className="validateButton" onClick={() => validationStateHandler()}>
+              CHECK FOR VALIDATION
+            </button>
           </Col>
         </Row>
       </>
       {isDataAvailable && (
-        <Card>
+    
           <TrayValidation
             trayData={trayData}
             cableCalculatedData={cableCalculatedData}
           />
-        </Card>
+      
       )}
     </>
   );

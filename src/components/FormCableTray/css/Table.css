@@ -19,12 +19,9 @@ td, th {
 .firsttd{
   width: 400px;
 }
-.buttonadd{
-  width: 120px;
-  font-size: medium;
- 
+.addCableButton{
+  width: 100% !important;
 }
-
 .marginSet{
   margin-left: 0;
   margin-right: 0;

@@ -8,7 +8,7 @@ const DetailsofHTandLT = (props) => {
     <>
       <Card.Body>
         <Row className="mb-2">
-          <Card.Title>HT and LT Side details</Card.Title>
+          <Card.Subtitle className="font-weight-bold">HT and LT Side details</Card.Subtitle>
         </Row>
         <Row className="mb-2">
           <Col md={8} lg="7">

@@ -19,7 +19,7 @@ function ProductTable(props) {
     <>
       <>
         <Row className="py-2">
-          <Col lg={3} md={3}>
+          <Col lg={3} md={3} className={"font-weight-bold"}>
             Appliance
           </Col>
           <Col md={2} className={styles.columnHeader}>
@@ -39,7 +39,7 @@ function ProductTable(props) {
         <Row>
           <Col md={1}>
             <Button
-              variant="outline-danger"
+              variant="outline-primary"
               className={styles.addAppliance}
               type="button"
               onClick={() =>
@@ -57,7 +57,7 @@ function ProductTable(props) {
                 })
               }
             >
-              Add Appliance
+              ADD APPLIANCE
             </Button>{" "}
           </Col>
         </Row>

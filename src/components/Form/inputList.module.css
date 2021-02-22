@@ -97,8 +97,9 @@ input[list] {
     height: 70%;
     margin-bottom: 0.5rem;
   }
-  .editableCell__inputText {
+  .append{
     width: 70px;
+    font-size: 12px;
   }
 }
 
@@ -117,6 +118,10 @@ input[list] {
   }
   .formControl {
     width: 100% !important;
+  }
+  .append{
+    width: 70px;
+    font-size: 12px;
   }
 }
 @media (min-width: 768px) {
@@ -158,7 +163,7 @@ input[list] {
   }
   .rowMargin {
     margin-bottom: 2%;
-  }
+  } 
   .btn {
     padding: 5px 20px;
     width: 220px;

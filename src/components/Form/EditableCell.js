@@ -46,7 +46,7 @@ function EditableCell(props) {
           }}
         />
         <InputGroup.Prepend>
-          <InputGroup.Text className={styles.editableCell__inputText}>
+          <InputGroup.Text className={styles.append}>
             {props.append}
           </InputGroup.Text>
         </InputGroup.Prepend>
